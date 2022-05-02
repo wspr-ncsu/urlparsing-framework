@@ -1,0 +1,467 @@
+http://%67%6f%6f%67%6c%65%2e%63%6f%6d
+* Could not resolve host: %67%6f%6f%67%6c%65%2e%63%6f%6d
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+http://%31%32%37%2e%30%2e%30%2e%31
+* Could not resolve host: %31%32%37%2e%30%2e%30%2e%31
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+ldap://127.0.0.1#.evilhost.com:1389/a
+*   Trying 127.0.0.1:389...
+* connect to 127.0.0.1 port 389 failed: Connection refused
+* Failed to connect to 127.0.0.1 port 389: Connection refused
+* Closing connection 0
+Couldn't connect to server
+
+-------------
+foo.com?u=///evil.com
+*   Trying 34.206.39.153:80...
+* Connected to foo.com (34.206.39.153) port 80 (#0)
+> HEAD /?u=///evil.com HTTP/1.1
+Host: foo.com
+Accept: */*
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 301 Moved Permanently
+HTTP/1.1 301 Moved Permanently
+< Server: nginx/1.18.0 (Ubuntu)
+Server: nginx/1.18.0 (Ubuntu)
+< Date: Sat, 26 Feb 2022 17:44:06 GMT
+Date: Sat, 26 Feb 2022 17:44:06 GMT
+< Content-Type: text/html
+Content-Type: text/html
+< Content-Length: 178
+Content-Length: 178
+< Location: http://www.foo.com/?u=///evil.com
+Location: http://www.foo.com/?u=///evil.com
+< Set-Cookie: SERVERID=vpc4|YhprL|YhprL; path=/
+Set-Cookie: SERVERID=vpc4|YhprL|YhprL; path=/
+< Cache-control: private
+Cache-control: private
+
+< 
+* Connection #0 to host foo.com left intact
+
+
+-------------
+http://www.victim.com/////evil.com
+* Could not resolve host: www.victim.com
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+https://EXAMPLE.com/../x
+*   Trying 2606:2800:220:1:248:1893:25c8:1946:443...
+* Connected to EXAMPLE.com (2606:2800:220:1:248:1893:25c8:1946) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=US; ST=California; L=Los Angeles; O=Verizon Digital Media Services, Inc.; CN=www.example.org
+*  start date: Dec 10 00:00:00 2021 GMT
+*  expire date: Dec  9 23:59:59 2022 GMT
+*  subjectAltName: host "EXAMPLE.com" matched cert's "example.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert TLS RSA SHA256 2020 CA1
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x559fe6fe6090)
+> HEAD /x HTTP/2
+Host: EXAMPLE.com
+accept: */*
+
+* old SSL session ID is stale, removing
+* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!
+< HTTP/2 404 
+HTTP/2 404 
+< content-encoding: gzip
+content-encoding: gzip
+< accept-ranges: bytes
+accept-ranges: bytes
+< age: 419613
+age: 419613
+< cache-control: max-age=604800
+cache-control: max-age=604800
+< content-type: text/html; charset=UTF-8
+content-type: text/html; charset=UTF-8
+< date: Sat, 26 Feb 2022 17:44:06 GMT
+date: Sat, 26 Feb 2022 17:44:06 GMT
+< expires: Sat, 05 Mar 2022 17:44:06 GMT
+expires: Sat, 05 Mar 2022 17:44:06 GMT
+< last-modified: Mon, 21 Feb 2022 21:10:33 GMT
+last-modified: Mon, 21 Feb 2022 21:10:33 GMT
+< server: ECS (dcb/7FA3)
+server: ECS (dcb/7FA3)
+< x-cache: 404-HIT
+x-cache: 404-HIT
+< content-length: 648
+content-length: 648
+
+< 
+* Connection #0 to host EXAMPLE.com left intact
+
+
+-------------
+urn:isbn:9780307476463
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+sub.example.إختبار
+* Failed to convert sub.example.إختبار to ACE; could not convert string to UTF-8
+
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://user@example.com:80@daniel.haxx.se
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+jndi:ldap://127.0.0.1#.evilhost.com:1389/a
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+javascript:alert('\@google.com/')
+*   Trying 2607:f8b0:4002:c06::8b:80...
+* Connected to google.com (2607:f8b0:4002:c06::8b) port 80 (#0)
+* Server auth using Basic with user 'javascript'
+> HEAD /') HTTP/1.1
+Host: google.com
+Authorization: Basic amF2YXNjcmlwdDphbGVydCgnXA==
+Accept: */*
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+< Content-Type: text/html; charset=UTF-8
+Content-Type: text/html; charset=UTF-8
+< Referrer-Policy: no-referrer
+Referrer-Policy: no-referrer
+< Content-Length: 1567
+Content-Length: 1567
+< Date: Sat, 26 Feb 2022 17:44:07 GMT
+Date: Sat, 26 Feb 2022 17:44:07 GMT
+
+< 
+* Connection #0 to host google.com left intact
+
+
+-------------
+http://foo@evil.com:80@google.com/
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://foo@127.0.0.1 @google.com/
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://google.com@evil.com
+*   Trying 66.96.146.129:80...
+* Connected to evil.com (66.96.146.129) port 80 (#0)
+* Server auth using Basic with user 'google.com'
+> HEAD / HTTP/1.1
+Host: evil.com
+Authorization: Basic Z29vZ2xlLmNvbTo=
+Accept: */*
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< Date: Sat, 26 Feb 2022 17:44:07 GMT
+Date: Sat, 26 Feb 2022 17:44:07 GMT
+< Content-Type: text/html
+Content-Type: text/html
+< Content-Length: 4166
+Content-Length: 4166
+< Connection: keep-alive
+Connection: keep-alive
+< Server: Apache/2
+Server: Apache/2
+< Last-Modified: Sat, 15 Jan 2022 23:21:33 GMT
+Last-Modified: Sat, 15 Jan 2022 23:21:33 GMT
+< ETag: "1046-5d5a72e24309e"
+ETag: "1046-5d5a72e24309e"
+< Accept-Ranges: bytes
+Accept-Ranges: bytes
+< Cache-Control: max-age=3600
+Cache-Control: max-age=3600
+< Expires: Sat, 26 Feb 2022 18:44:07 GMT
+Expires: Sat, 26 Feb 2022 18:44:07 GMT
+< Age: 0
+Age: 0
+
+< 
+* Connection #0 to host evil.com left intact
+
+
+-------------
+http://0
+ SLAVEOF orange.tw 6379
+ :80
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://1.1.1.1 &@2.2.2.2# @3.3.3.3/
+*   Trying 2.2.2.2:80...
+* Connection timed out after 2002 milliseconds
+* Closing connection 0
+Timeout was reached
+
+-------------
+http:\\foo.com\
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http:\\a\b:c\d@foo.com\
+* Could not resolve host: foo.com\
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+foo://///////bar.com/
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http:[61:27]/:foo
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+ This is \interesting// 	
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+path/f.txt
+* Could not resolve host: path
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+javascript :alert("He:/l\l#o?foo"); 
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://google.com:80\@yahoo.com/#what\is going on
+*   Trying 2001:4998:44:3507::8000:80...
+* Connected to yahoo.com (2001:4998:44:3507::8000) port 80 (#0)
+* Server auth using Basic with user 'google.com'
+> HEAD / HTTP/1.1
+Host: yahoo.com
+Authorization: Basic Z29vZ2xlLmNvbTo4MFw=
+Accept: */*
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 301 Moved Permanently
+HTTP/1.1 301 Moved Permanently
+< Date: Sat, 26 Feb 2022 17:44:09 GMT
+Date: Sat, 26 Feb 2022 17:44:09 GMT
+< Connection: keep-alive
+Connection: keep-alive
+< Server: ATS
+Server: ATS
+< Cache-Control: no-store, no-cache
+Cache-Control: no-store, no-cache
+< Content-Type: text/html
+Content-Type: text/html
+< Content-Language: en
+Content-Language: en
+< X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+< Location: https://yahoo.com/
+Location: https://yahoo.com/
+< Content-Length: 8
+Content-Length: 8
+
+< 
+* Connection #0 to host yahoo.com left intact
+
+
+-------------
+\\\\what-is-up.com
+* Could not resolve host: \\\\what-is-up.com
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+https:/\/\/\github.com/foo/bar
+* Could not resolve host: \
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+file://c:\foo\bar\
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+foo/bar
+* Could not resolve host: foo
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+d/e/f/./../../g
+* Could not resolve host: d
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+http://www.example.net:0x10
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+g;x?y#s
+* Could not resolve host: g;x
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+../g
+* Could not resolve host: ..
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+path
+* Could not resolve host: path
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123
+*   Trying 2a02:cb40:200::1ad:80...
+*   Trying 185.85.0.29:80...
+* Connected to www.php.net (2a02:cb40:200::1ad) port 80 (#0)
+> HEAD /index.php?test=1&test2=char&test3=mixesCI HTTP/1.1
+Host: www.php.net
+Accept: */*
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 301 Moved Permanently
+HTTP/1.1 301 Moved Permanently
+< Server: myracloud
+Server: myracloud
+< Date: Sat, 26 Feb 2022 17:44:10 GMT
+Date: Sat, 26 Feb 2022 17:44:10 GMT
+< Content-Type: text/html
+Content-Type: text/html
+< Content-Length: 161
+Content-Length: 161
+< Connection: keep-alive
+Connection: keep-alive
+< Location: https://www.php.net/index.php?test=1&test2=char&test3=mixesCI
+Location: https://www.php.net/index.php?test=1&test2=char&test3=mixesCI
+
+< 
+* Connection #0 to host www.php.net left intact
+
+
+-------------
+64.246.30.37
+*   Trying 64.246.30.37:80...
+* Connection timed out after 2001 milliseconds
+* Closing connection 0
+Timeout was reached
+
+-------------
+http://user\u0000@example.com/path\u0000?query\u0000#fragment\u0000
+*   Trying 2606:2800:220:1:248:1893:25c8:1946:80...
+* Connected to example.com (2606:2800:220:1:248:1893:25c8:1946) port 80 (#0)
+* Server auth using Basic with user 'user\u0000'
+> HEAD /path\u0000?query\u0000 HTTP/1.1
+Host: example.com
+Authorization: Basic dXNlclx1MDAwMDo=
+Accept: */*
+
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 404 Not Found
+HTTP/1.1 404 Not Found
+< Cache-Control: max-age=604800
+Cache-Control: max-age=604800
+< Content-Type: text/html; charset=UTF-8
+Content-Type: text/html; charset=UTF-8
+< Date: Sat, 26 Feb 2022 17:44:12 GMT
+Date: Sat, 26 Feb 2022 17:44:12 GMT
+< Expires: Sat, 05 Mar 2022 17:44:12 GMT
+Expires: Sat, 05 Mar 2022 17:44:12 GMT
+< Server: EOS (vny/0452)
+Server: EOS (vny/0452)
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Content-Length: 1256
+Content-Length: 1256
+
+< 
+* Connection #0 to host example.com left intact
+
+
+-------------
+http://\u30d2:\u30ad@\u30d2.abc.\u30cb/\u30d2?\u30ad#\u30ef
+* Could not resolve host: \u30d2.abc.\u30cb
+* Closing connection 0
+Couldn't resolve host name
+
+-------------
+https://user:pass@xdavidhu.me	est.corp.google.com:8080/path/to/something?param=value#hash
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+google.com:12345
+*   Trying 2607:f8b0:4002:c06::66:12345...
+*   Trying 64.233.177.113:12345...
+* After 999ms connect time, move on!
+* connect to 2607:f8b0:4002:c06::66 port 12345 failed: Connection timed out
+*   Trying 2607:f8b0:4002:c06::8b:12345...
+* After 399ms connect time, move on!
+* connect to 2607:f8b0:4002:c06::8b port 12345 failed: Connection timed out
+*   Trying 2607:f8b0:4002:c06::71:12345...
+* After 199ms connect time, move on!
+* connect to 2607:f8b0:4002:c06::71 port 12345 failed: Connection timed out
+*   Trying 2607:f8b0:4002:c06::8a:12345...
+* After 98ms connect time, move on!
+* connect to 2607:f8b0:4002:c06::8a port 12345 failed: Connection timed out
+* Connection timed out after 2000 milliseconds
+* Closing connection 0
+Timeout was reached
+
+-------------
+10.251.0.83:7777?a=1 HTTP/1.1
+X-injected: header
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://127.0.0.1:6379?
+SET test failure12
+:8080/test/?test=a
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------
+http://127.0.0.
+1:6379?SET test failure12:8080/test/?test=a
+* Closing connection -1
+URL using bad/illegal format or missing URL
+
+-------------

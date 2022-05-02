@@ -1,0 +1,1953 @@
+{
+	"urls": [{
+			"input": "http://google.com/mail",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/mail/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "google.com/mail",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://www.google.com",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "www.google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://mail.google.com",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "mail.google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:8000/mail/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "8000",
+				"path": "/mail/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:8000",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "8000",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "https://google.com",
+			"output": {
+				"scheme": "https",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "https://google.com:8000",
+			"output": {
+				"scheme": "https",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "8000",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://user:password@127.0.0.1:1234",
+			"output": {
+				"scheme": "http",
+				"user": "user",
+				"password": "password",
+				"host": "127.0.0.1",
+				"port": "1234",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/foo=http://bar:42/baz",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/foo=http://bar:42/baz",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com?foo=http://bar:42/baz",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "foo=http://bar:42/baz",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com#foo=http://bar:42/baz",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": "foo=http://bar:42/baz"
+			}
+		},
+		{
+			"input": "173.194.35.7",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://173.194.35.7",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://173.194.35.7/test",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "",
+				"path": "/test",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://173.194.35.7:80",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "80",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://173.194.35.7:80/test",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "80",
+				"path": "/test",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "[2a00:1450:4001:c01::67]",
+			"output": {
+				"scheme": "[2a00",
+				"user": "",
+				"password": "",
+				"host": "1450:4001:c01::67]",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[2a00:1450:4001:c01::67]",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[2a00:1450:4001:c01::67]",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[2a00:1450:4001:c01::67]/test",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[2a00:1450:4001:c01::67]",
+				"port": "",
+				"path": "/test",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[2a00:1450:4001:c01::67]:80",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[2a00:1450:4001:c01::67]",
+				"port": "80",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[2a00:1450:4001:c01::67]:80/test",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[2a00:1450:4001:c01::67]",
+				"port": "80",
+				"path": "/test",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[fedc:ba98:7654:3210:fedc:ba98:7654:3210]:8000/index.html",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[fedc:ba98:7654:3210:fedc:ba98:7654:3210]",
+				"port": "8000",
+				"path": "/index.html",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[1080:0:0:0:8:800:200c:417a]/index.html",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[1080:0:0:0:8:800:200c:417a]",
+				"port": "",
+				"path": "/index.html",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[3ffe:2a00:100:7031::1]",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[3ffe:2a00:100:7031::1]",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[1080::8:800:200c:417a]/foo",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[1080::8:800:200c:417a]",
+				"port": "",
+				"path": "/foo",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[::192.9.5.5]/ipng",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[::192.9.5.5]",
+				"port": "",
+				"path": "/ipng",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[::ffff:129.144.52.38]:42/index.html",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[::ffff:129.144.52.38]",
+				"port": "42",
+				"path": "/index.html",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://[2010:836b:4179::836b:4179]",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "[2010:836b:4179::836b:4179]",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://GOOGLE.COM/mail/",
+			"output": {
+				"scheme": "HTTP",
+				"user": "",
+				"password": "",
+				"host": "GOOGLE.COM",
+				"port": "",
+				"path": "/mail/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "GOogle.COM/mail",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "GOogle.COM",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://GoOgLe.CoM:8000/mail/",
+			"output": {
+				"scheme": "HTTP",
+				"user": "",
+				"password": "",
+				"host": "GoOgLe.CoM",
+				"port": "8000",
+				"path": "/mail/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://user:password@EXAMPLE.COM:1234",
+			"output": {
+				"scheme": "HTTP",
+				"user": "user",
+				"password": "password",
+				"host": "EXAMPLE.COM",
+				"port": "1234",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "173.194.35.7",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://173.194.35.7",
+			"output": {
+				"scheme": "HTTP",
+				"user": "",
+				"password": "",
+				"host": "173.194.35.7",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://[2a00:1450:4001:c01::67]:80/test",
+			"output": {
+				"scheme": "HTTP",
+				"user": "",
+				"password": "",
+				"host": "[2a00:1450:4001:c01::67]",
+				"port": "80",
+				"path": "/test",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://[FEDC:BA98:7654:3210:FEDC:BA98:7654:3210]:8000/index.html",
+			"output": {
+				"scheme": "HTTP",
+				"user": "",
+				"password": "",
+				"host": "[FEDC:BA98:7654:3210:FEDC:BA98:7654:3210]",
+				"port": "8000",
+				"path": "/index.html",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTPS://[1080:0:0:0:8:800:200c:417A]/index.html",
+			"output": {
+				"scheme": "HTTPS",
+				"user": "",
+				"password": "",
+				"host": "[1080:0:0:0:8:800:200c:417A]",
+				"port": "",
+				"path": "/index.html",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "abOut://eXamPlE.com?info=1",
+			"output": {
+				"scheme": "abOut",
+				"user": "",
+				"password": "",
+				"host": "eXamPlE.com",
+				"port": "",
+				"path": "",
+				"query": "info=1",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http+UNIX://%2fvar%2frun%2fSOCKET/path",
+			"output": {
+				"scheme": "http+UNIX",
+				"user": "",
+				"password": "",
+				"host": "%2fvar%2frun%2fSOCKET",
+				"port": "",
+				"path": "/path",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://GOOGLE.COM/MAIL/",
+			"output": {
+				"scheme": "HTTP",
+				"user": "",
+				"password": "",
+				"host": "GOOGLE.COM",
+				"port": "",
+				"path": "/MAIL/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://user@domain.com:password@example.com/~tilde@?@",
+			"output": {
+				"scheme": "http",
+				"user": "user@domain.com",
+				"password": "password",
+				"host": "example.com",
+				"port": "",
+				"path": "/~tilde@",
+				"query": "@",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTP://JeremyCline:Hunter2@Example.com:8080/",
+			"output": {
+				"scheme": "HTTP",
+				"user": "JeremyCline",
+				"password": "Hunter2",
+				"host": "Example.com",
+				"port": "8080",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "HTTPS://Example.Com/?Key=Value",
+			"output": {
+				"scheme": "HTTPS",
+				"user": "",
+				"password": "",
+				"host": "Example.Com",
+				"port": "",
+				"path": "/",
+				"query": "Key=Value",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "Https://Example.Com/#Fragment",
+			"output": {
+				"scheme": "Https",
+				"user": "",
+				"password": "",
+				"host": "Example.Com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": "Fragment"
+			}
+		},
+		{
+			"input": "[::1%25]",
+			"output": {
+				"scheme": "[",
+				"user": "",
+				"password": "",
+				"host": ":1%25]",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "[::Ff%etH0%Ff]/%ab%Af",
+			"output": {
+				"scheme": "[",
+				"user": "",
+				"password": "",
+				"host": ":Ff%etH0%Ff]",
+				"port": "",
+				"path": "/%ab%Af",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://user:pass@[AaAa::Ff%25etH0%Ff]/%ab%Af",
+			"output": {
+				"scheme": "http",
+				"user": "user",
+				"password": "pass",
+				"host": "[AaAa::Ff%25etH0%Ff]",
+				"port": "",
+				"path": "/%ab%Af",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/p[]?parameter[]=\"hello\"#fragment#",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/p[]",
+				"query": "parameter[]=\"hello\"",
+				"fragment": "fragment#"
+			}
+		},
+		{
+			"input": "http://google.com/p%5B%5d?parameter%5b%5D=%22hello%22#fragment%23",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/p%5B%5d",
+				"query": "parameter%5b%5D=%22hello%22",
+				"fragment": "fragment%23"
+			}
+		},
+		{
+			"input": "http://user\u0000@example.com/path\u0000?query\u0000#fragment\u0000",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0000@example.com/path\u0000",
+				"query": "query\u0000",
+				"fragment": "fragment\u0000"
+			}
+		},
+		{
+			"input": "http://user\u0001@example.com/path\u0001?query\u0001#fragment\u0001",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0001@example.com/path\u0001",
+				"query": "query\u0001",
+				"fragment": "fragment\u0001"
+			}
+		},
+		{
+			"input": "http://user\u0002@example.com/path\u0002?query\u0002#fragment\u0002",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0002@example.com/path\u0002",
+				"query": "query\u0002",
+				"fragment": "fragment\u0002"
+			}
+		},
+		{
+			"input": "http://user\u0003@example.com/path\u0003?query\u0003#fragment\u0003",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0003@example.com/path\u0003",
+				"query": "query\u0003",
+				"fragment": "fragment\u0003"
+			}
+		},
+		{
+			"input": "http://user\u0004@example.com/path\u0004?query\u0004#fragment\u0004",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0004@example.com/path\u0004",
+				"query": "query\u0004",
+				"fragment": "fragment\u0004"
+			}
+		},
+		{
+			"input": "http://user\u0005@example.com/path\u0005?query\u0005#fragment\u0005",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0005@example.com/path\u0005",
+				"query": "query\u0005",
+				"fragment": "fragment\u0005"
+			}
+		},
+		{
+			"input": "http://user\u0006@example.com/path\u0006?query\u0006#fragment\u0006",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0006@example.com/path\u0006",
+				"query": "query\u0006",
+				"fragment": "fragment\u0006"
+			}
+		},
+		{
+			"input": "http://user\u0007@example.com/path\u0007?query\u0007#fragment\u0007",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0007@example.com/path\u0007",
+				"query": "query\u0007",
+				"fragment": "fragment\u0007"
+			}
+		},
+		{
+			"input": "http://user\u0008@example.com/path\u0008?query\u0008#fragment\u0008",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0008@example.com/path\u0008",
+				"query": "query\u0008",
+				"fragment": "fragment\u0008"
+			}
+		},
+		{
+			"input": "http://user @example.com/path ?query  #fragment ",
+			"output": {
+				"scheme": "http",
+				"user": "user ",
+				"password": "",
+				"host": "example.com",
+				"port": "",
+				"path": "/path ",
+				"query": "query  ",
+				"fragment": "fragment"
+			}
+		},
+		{
+			"input": "http://user\r\n@example.com/path\r\n?query\r\n#fragment\r\n",
+			"output": {
+				"scheme": "http",
+				"user": "user\r\n",
+				"password": "",
+				"host": "example.com",
+				"port": "",
+				"path": "/path\r\n",
+				"query": "query\r\n",
+				"fragment": "fragment"
+			}
+		},
+		{
+			"input": "http://user\u000b@example.com/path\u000b?query\u000b#fragment\u000b",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u000b@example.com/path\u000b",
+				"query": "query\u000b",
+				"fragment": "fragment\u000b"
+			}
+		},
+		{
+			"input": "http://user\u000c@example.com/path\u000c?query\u000c#fragment\u000c",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u000c@example.com/path\u000c",
+				"query": "query\u000c",
+				"fragment": "fragment\u000c"
+			}
+		},
+		{
+			"input": "http://user\r\n@example.com/path\r\n?query\r\n#fragment\r\n",
+			"output": {
+				"scheme": "http",
+				"user": "user\r\n",
+				"password": "",
+				"host": "example.com",
+				"port": "",
+				"path": "/path\r\n",
+				"query": "query\r\n",
+				"fragment": "fragment"
+			}
+		},
+		{
+			"input": "http://user\u000e@example.com/path\u000e?query\u000e#fragment\u000e",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u000e@example.com/path\u000e",
+				"query": "query\u000e",
+				"fragment": "fragment\u000e"
+			}
+		},
+		{
+			"input": "http://user\u000f@example.com/path\u000f?query\u000f#fragment\u000f",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u000f@example.com/path\u000f",
+				"query": "query\u000f",
+				"fragment": "fragment\u000f"
+			}
+		},
+		{
+			"input": "http://user\u0010@example.com/path\u0010?query\u0010#fragment\u0010",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0010@example.com/path\u0010",
+				"query": "query\u0010",
+				"fragment": "fragment\u0010"
+			}
+		},
+		{
+			"input": "http://user\u0011@example.com/path\u0011?query\u0011#fragment\u0011",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0011@example.com/path\u0011",
+				"query": "query\u0011",
+				"fragment": "fragment\u0011"
+			}
+		},
+		{
+			"input": "http://user\u0012@example.com/path\u0012?query\u0012#fragment\u0012",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0012@example.com/path\u0012",
+				"query": "query\u0012",
+				"fragment": "fragment\u0012"
+			}
+		},
+		{
+			"input": "http://user\u0013@example.com/path\u0013?query\u0013#fragment\u0013",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0013@example.com/path\u0013",
+				"query": "query\u0013",
+				"fragment": "fragment\u0013"
+			}
+		},
+		{
+			"input": "http://user\u0014@example.com/path\u0014?query\u0014#fragment\u0014",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0014@example.com/path\u0014",
+				"query": "query\u0014",
+				"fragment": "fragment\u0014"
+			}
+		},
+		{
+			"input": "http://user\u0015@example.com/path\u0015?query\u0015#fragment\u0015",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0015@example.com/path\u0015",
+				"query": "query\u0015",
+				"fragment": "fragment\u0015"
+			}
+		},
+		{
+			"input": "http://user\u0016@example.com/path\u0016?query\u0016#fragment\u0016",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0016@example.com/path\u0016",
+				"query": "query\u0016",
+				"fragment": "fragment\u0016"
+			}
+		},
+		{
+			"input": "http://user\u0017@example.com/path\u0017?query\u0017#fragment\u0017",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0017@example.com/path\u0017",
+				"query": "query\u0017",
+				"fragment": "fragment\u0017"
+			}
+		},
+		{
+			"input": "http://user\u0018@example.com/path\u0018?query\u0018#fragment\u0018",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0018@example.com/path\u0018",
+				"query": "query\u0018",
+				"fragment": "fragment\u0018"
+			}
+		},
+		{
+			"input": "http://user\u0019@example.com/path\u0019?query\u0019#fragment\u0019",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u0019@example.com/path\u0019",
+				"query": "query\u0019",
+				"fragment": "fragment\u0019"
+			}
+		},
+		{
+			"input": "http://user\u001a@example.com/path\u001a?query\u001a#fragment\u001a",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u001a@example.com/path\u001a",
+				"query": "query\u001a",
+				"fragment": "fragment\u001a"
+			}
+		},
+		{
+			"input": "http://user\u001b@example.com/path\u001b?query\u001b#fragment\u001b",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u001b@example.com/path\u001b",
+				"query": "query\u001b",
+				"fragment": "fragment\u001b"
+			}
+		},
+		{
+			"input": "http://user\u001c@example.com/path\u001c?query\u001c#fragment\u001c",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u001c@example.com/path\u001c",
+				"query": "query\u001c",
+				"fragment": "fragment\u001c"
+			}
+		},
+		{
+			"input": "http://user\u001d@example.com/path\u001d?query\u001d#fragment\u001d",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u001d@example.com/path\u001d",
+				"query": "query\u001d",
+				"fragment": "fragment\u001d"
+			}
+		},
+		{
+			"input": "http://user\u001e@example.com/path\u001e?query\u001e#fragment\u001e",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u001e@example.com/path\u001e",
+				"query": "query\u001e",
+				"fragment": "fragment\u001e"
+			}
+		},
+		{
+			"input": "http://user\u001f@example.com/path\u001f?query\u001f#fragment\u001f",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u001f@example.com/path\u001f",
+				"query": "query\u001f",
+				"fragment": "fragment\u001f"
+			}
+		},
+		{
+			"input": "http://user @example.com/path ?query #fragment ",
+			"output": {
+				"scheme": "http",
+				"user": "user ",
+				"password": "",
+				"host": "example.com",
+				"port": "",
+				"path": "/path ",
+				"query": "query ",
+				"fragment": "fragment"
+			}
+		},
+		{
+			"input": "http://user\u007f@example.com/path\u007f?query\u007f#fragment\u007f",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "user",
+				"port": "",
+				"path": "\u007f@example.com/path\u007f",
+				"query": "query\u007f",
+				"fragment": "fragment\u007f"
+			}
+		},
+		{
+			"input": "http://google.com/mail",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/mail/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/mail",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "google.com/mail",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com?foo",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "foo",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "#?/!google.com/?foo",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": "?/!google.com/?foo"
+			}
+		},
+		{
+			"input": "/foo",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "foo",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/foo?bar=baz",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "foo",
+				"port": "",
+				"path": "",
+				"query": "bar=baz",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/foo?bar=baz#banana?apple/orange",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "foo",
+				"port": "",
+				"path": "",
+				"query": "bar=baz",
+				"fragment": "banana?apple/orange"
+			}
+		},
+		{
+			"input": "/redirect?target=http://localhost:61020/",
+			"output": {
+				"scheme": "/redirect?target=http",
+				"user": "",
+				"password": "",
+				"host": "localhost",
+				"port": "61020",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:80/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "80",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:80",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "80",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://foo:bar@localhost/",
+			"output": {
+				"scheme": "http",
+				"user": "foo",
+				"password": "bar",
+				"host": "localhost",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://foo@localhost/",
+			"output": {
+				"scheme": "http",
+				"user": "foo",
+				"password": "",
+				"host": "localhost",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://foo:bar@localhost/",
+			"output": {
+				"scheme": "http",
+				"user": "foo",
+				"password": "bar",
+				"host": "localhost",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "?",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "#",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/abc/../def",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "abc",
+				"port": "",
+				"path": "/../def",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://K\u00f6nigsg\u00e4\u00dfchen.de/stra\u00dfe",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "K",
+				"port": "",
+				"path": "\u00f6nigsg\u00e4\u00dfchen.de/stra\u00dfe",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://user@email.com:password@example.com/",
+			"output": {
+				"scheme": "http",
+				"user": "user@email.com",
+				"password": "password",
+				"host": "example.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://user\":quoted@example.com/",
+			"output": {
+				"scheme": "http",
+				"user": "user\"",
+				"password": "quoted",
+				"host": "example.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/\ud800",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/\ud800",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com?q=\udc00",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "q=\udc00",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com#\udc00",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": "\udc00"
+			}
+		},
+		{
+			"input": "/abc/../def",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "abc",
+				"port": "",
+				"path": "/../def",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/..",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "..",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/./abc/./def/",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": ".",
+				"port": "",
+				"path": "/abc/./def/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/.",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": ".",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/./",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": ".",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/abc/./.././d/././e/.././f/./../../ghi",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "abc",
+				"port": "",
+				"path": "/./.././d/././e/.././f/./../../ghi",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/mail",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/mail/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "?",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "#",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/foo?bar=baz",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "foo",
+				"port": "",
+				"path": "",
+				"query": "bar=baz",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/mail",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com:80/mail",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "80",
+				"path": "/mail",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "google.com/foobar",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/foobar",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "google.com:12345",
+			"output": {
+				"scheme": "google.com",
+				"user": "",
+				"password": "",
+				"host": "12345",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "/",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com#@evil.com/",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": "@evil.com/"
+			}
+		},
+		{
+			"input": "http://127.0.0.1%0d%0aConnection%3a%20keep-alive",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "127.0.0.1%0d%0aConnection%3a%20keep-alive",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://google.com/\uff2e\uff2e/abc",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/\uff2e\uff2e/abc",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "javascript:a='@google.com:12345/';alert(0)",
+			"output": {
+				"scheme": "javascript",
+				"user": "a='",
+				"password": "",
+				"host": "google.com",
+				"port": "12345",
+				"path": "/';alert(0)",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "//google.com/a/b/c",
+			"output": {
+				"scheme": "",
+				"user": "",
+				"password": "",
+				"host": "google.com",
+				"port": "",
+				"path": "/a/b/c",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://\u30d2:\u30ad@\u30d2.abc.\u30cb/\u30d2?\u30ad#\u30ef",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "u30d2",
+				"port": "",
+				"path": "\u30ad@\u30d2.abc.\u30cb/\u30d2",
+				"query": "\u30ad",
+				"fragment": "\u30ef"
+			}
+		},
+		{
+			"input": "10.251.0.83:7777?a=1 HTTP/1.1\r\nX-injected: header",
+			"output": {
+				"scheme": "10.251.0.83",
+				"user": "",
+				"password": "",
+				"host": "7777",
+				"port": "",
+				"path": "",
+				"query": "a=1 HTTP/1.1\r\nX-injected: header",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://127.0.0.1:6379?\r\nSET test failure12\r\n:8080/test/?test=a",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "127.0.0.1",
+				"port": "6379",
+				"path": "",
+				"query": "\r\nSET test failure12\r\n:8080/test/?test=a",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "https://user:pass@xdavidhu.me\test.corp.google.com:8080/path/to/something?param=value#hash",
+			"output": {
+				"scheme": "https",
+				"user": "user",
+				"password": "pass",
+				"host": "xdavidhu.me\test.corp.google.com",
+				"port": "8080",
+				"path": "/path/to/something",
+				"query": "param=value",
+				"fragment": "hash"
+			}
+		},
+		{
+			"input": "https://user:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@example.com",
+			"output": {
+				"scheme": "https",
+				"user": "user",
+				"password": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+				"host": "example.com",
+				"port": "",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "http://proxy:8080",
+			"output": {
+				"scheme": "http",
+				"user": "",
+				"password": "",
+				"host": "proxy",
+				"port": "8080",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		},
+		{
+			"input": "https://proxy:8443",
+			"output": {
+				"scheme": "https",
+				"user": "",
+				"password": "",
+				"host": "proxy",
+				"port": "8443",
+				"path": "",
+				"query": "",
+				"fragment": ""
+			}
+		}
+	]
+}

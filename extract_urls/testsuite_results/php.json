@@ -1,0 +1,1619 @@
+{
+    "environment": "php",
+    "name": "php",
+    "version": "8.0.8",
+    "urls": [
+        {
+            "input": "64.246.30.37",
+            "expected_output": {
+                "path": "64.246.30.37",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://64.246.30.37",
+            "expected_output": {
+                "scheme": "http",
+                "host": "64.246.30.37",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://64.246.30.37/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "64.246.30.37",
+                "path": "/",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "64.246.30.37/",
+            "expected_output": {
+                "path": "64.246.30.37/",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "64.246.30.37:80/",
+            "expected_output": {
+                "host": "64.246.30.37",
+                "port": 80,
+                "path": "/",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "php.net",
+            "expected_output": {
+                "path": "php.net",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "php.net/",
+            "expected_output": {
+                "path": "php.net/",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://php.net",
+            "expected_output": {
+                "scheme": "http",
+                "host": "php.net",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://php.net/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "php.net",
+                "path": "/",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "www.php.net",
+            "expected_output": {
+                "path": "www.php.net",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "www.php.net/",
+            "expected_output": {
+                "path": "www.php.net/",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "path": "/",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "www.php.net:80",
+            "expected_output": {
+                "host": "www.php.net",
+                "port": 80,
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "user": "",
+                "password": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net/index.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "path": "/index.php",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "www.php.net/?",
+            "expected_output": {
+                "path": "www.php.net/",
+                "query": "",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "www.php.net:80/?",
+            "expected_output": {
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "query": "",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net/?",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "path": "/",
+                "query": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/?",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "query": "",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/index.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/foo/bar/index.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/foo/bar/index.php",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/is/a/very/deep/directory/structure/and/file.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/is/a/very/deep/directory/structure/and/file.php",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/is/a/very/deep/directory/structure/and/file.php?lots=1&of=2&parameters=3&too=4&here=5",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/is/a/very/deep/directory/structure/and/file.php",
+                "query": "lots=1&of=2&parameters=3&too=4&here=5",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/is/a/very/deep/directory/structure/and/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/is/a/very/deep/directory/structure/and/",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/is/a/very/deep/directory/structure/and/file.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/is/a/very/deep/directory/structure/and/file.php",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/../a/../deep/directory",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/../a/../deep/directory",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/../a/../deep/directory/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/../a/../deep/directory/",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/this/is/a/very/deep/directory/../file.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/this/is/a/very/deep/directory/../file.php",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/index.php",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/index.php?",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "query": "",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/#foo",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "fragment": "foo",
+                "user": "",
+                "password": "",
+                "query": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/?#",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "query": "",
+                "fragment": "",
+                "user": "",
+                "password": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/?test=1",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "query": "test=1",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net/?test=1&",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "path": "/",
+                "query": "test=1&",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/?&",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/",
+                "query": "&",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/index.php?test=1&",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "query": "test=1&",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net/index.php?&",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "path": "/index.php",
+                "query": "&",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/index.php?foo&",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "query": "foo&",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net/index.php?&foo",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "path": "/index.php",
+                "query": "&foo",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.php.net:80/index.php?test=1&test2=char&test3=mixesCI",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "user": "",
+                "password": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "host": "www.php.net",
+                "port": 80,
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "scheme": "",
+                "user": "",
+                "password": ""
+            }
+        },
+        {
+            "input": "http://secret@www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "user": "secret",
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "password": ""
+            }
+        },
+        {
+            "input": "http://secret:@www.php.net/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "user": "secret",
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "password": "",
+                "port": ""
+            }
+        },
+        {
+            "input": "http://:hideout@www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "user": "",
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "password": "hideout"
+            }
+        },
+        {
+            "input": "http://secret:hideout@www.php.net/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "user": "secret",
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "password": "hideout",
+                "port": ""
+            }
+        },
+        {
+            "input": "http://secret@hideout@www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "user": "secret@hideout",
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "password": ""
+            }
+        },
+        {
+            "input": "http://secret:hid:out@www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.php.net",
+                "port": 80,
+                "user": "secret",
+                "path": "/index.php",
+                "query": "test=1&test2=char&test3=mixesCI",
+                "fragment": "some_page_ref123",
+                "password": "hid:out"
+            }
+        },
+        {
+            "input": "nntp://news.php.net",
+            "expected_output": {
+                "scheme": "nntp",
+                "host": "news.php.net",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "ftp://ftp.gnu.org/gnu/glic/glibc.tar.gz",
+            "expected_output": {
+                "scheme": "ftp",
+                "host": "ftp.gnu.org",
+                "path": "/gnu/glic/glibc.tar.gz",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "zlib:http://foo@bar",
+            "expected_output": {
+                "scheme": "zlib",
+                "path": "http://foo@bar",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "zlib:filename.txt",
+            "expected_output": {
+                "scheme": "zlib",
+                "path": "filename.txt",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "zlib:/path/to/my/file/file.txt",
+            "expected_output": {
+                "scheme": "zlib",
+                "path": "/path/to/my/file/file.txt",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "foo://foo@bar",
+            "expected_output": {
+                "scheme": "foo",
+                "host": "bar",
+                "user": "foo",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "mailto:me@mydomain.com",
+            "expected_output": {
+                "scheme": "mailto",
+                "path": "me@mydomain.com",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/foo.php?a=b&c=d",
+            "expected_output": {
+                "path": "/foo.php",
+                "query": "a=b&c=d",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "foo.php?a=b&c=d",
+            "expected_output": {
+                "path": "foo.php",
+                "query": "a=b&c=d",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user:passwd@www.example.com:8080?bar=1&boom=0",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.example.com",
+                "port": 8080,
+                "user": "user",
+                "query": "bar=1&boom=0",
+                "password": "passwd",
+                "path": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user_me-you:my_pas-word@www.example.com:8080?bar=1&boom=0",
+            "expected_output": {
+                "scheme": "http",
+                "host": "www.example.com",
+                "port": 8080,
+                "user": "user_me-you",
+                "query": "bar=1&boom=0",
+                "password": "my_pas-word",
+                "path": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///path/to/file",
+            "expected_output": {
+                "scheme": "file",
+                "path": "/path/to/file",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file://path/to/file",
+            "expected_output": {
+                "scheme": "file",
+                "host": "path",
+                "path": "/to/file",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:/path/to/file",
+            "expected_output": {
+                "scheme": "file",
+                "path": "/path/to/file",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://1.2.3.4:/abc.asp?a=1&b=2",
+            "expected_output": {
+                "scheme": "http",
+                "host": "1.2.3.4",
+                "path": "/abc.asp",
+                "query": "a=1&b=2",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://foo.com#bar",
+            "expected_output": {
+                "scheme": "http",
+                "host": "foo.com",
+                "fragment": "bar",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": ""
+            }
+        },
+        {
+            "input": "scheme:",
+            "expected_output": {
+                "scheme": "scheme",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "foo+bar://baz@bang/bla",
+            "expected_output": {
+                "scheme": "foo+bar",
+                "host": "bang",
+                "user": "baz",
+                "path": "/bla",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "gg:9130731",
+            "expected_output": {
+                "scheme": "gg",
+                "path": "9130731",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user:@pass@host/path?argument?value#etc",
+            "expected_output": {
+                "scheme": "http",
+                "host": "host",
+                "user": "user",
+                "path": "/path",
+                "query": "argument?value",
+                "fragment": "etc",
+                "password": "@pass",
+                "port": ""
+            }
+        },
+        {
+            "input": "http://10.10.10.10/:80",
+            "expected_output": {
+                "scheme": "http",
+                "host": "10.10.10.10",
+                "path": "/:80",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://x:?",
+            "expected_output": {
+                "scheme": "http",
+                "host": "x",
+                "query": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "x:blah.com",
+            "expected_output": {
+                "scheme": "x",
+                "path": "blah.com",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "x:/blah.com",
+            "expected_output": {
+                "scheme": "x",
+                "path": "/blah.com",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "x://::abc/?",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://::?",
+            "expected_output": {
+                "scheme": "http",
+                "host": ":",
+                "query": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://::#",
+            "expected_output": {
+                "scheme": "http",
+                "host": ":",
+                "fragment": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": ""
+            }
+        },
+        {
+            "input": "x://::6.5",
+            "expected_output": {
+                "scheme": "x",
+                "host": ":",
+                "port": 6,
+                "user": "",
+                "password": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://?:/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://@?:/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///:",
+            "expected_output": {
+                "scheme": "file",
+                "path": "/:",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///a:/",
+            "expected_output": {
+                "scheme": "file",
+                "path": "a:/",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///ab:/",
+            "expected_output": {
+                "scheme": "file",
+                "path": "/ab:/",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///a:/",
+            "expected_output": {
+                "scheme": "file",
+                "path": "a:/",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///@:/",
+            "expected_output": {
+                "scheme": "file",
+                "path": "@:/",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "file:///:80/",
+            "expected_output": {
+                "scheme": "file",
+                "path": "/:80/",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "[]",
+            "expected_output": {
+                "path": "[]",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[x:80]/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "[x:80]",
+                "path": "/",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "",
+            "expected_output": {
+                "path": "",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/",
+            "expected_output": {
+                "path": "/",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/rest/Users?filter={\"id\":\"123\"}",
+            "expected_output": {
+                "path": "/rest/Users",
+                "query": "filter={\"id\":\"123\"}",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "%:x",
+            "expected_output": {
+                "path": "%:x",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "https://example.com:0/",
+            "expected_output": {
+                "scheme": "https",
+                "host": "example.com",
+                "port": 0,
+                "path": "/",
+                "user": "",
+                "password": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http:///blah.com",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://:80",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user@:80",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user:pass@:80",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://:",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://@/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://@:/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://:/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://?",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://#",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://?:",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://:?",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://blah.com:123456",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://blah.com:abcdef",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://example.com/path/script.html?t=1#fragment?data",
+            "expected_output": {
+                "scheme": "http",
+                "host": "example.com",
+                "path": "/path/script.html",
+                "query": "t=1",
+                "fragment": "fragment?data",
+                "user": "",
+                "password": "",
+                "port": ""
+            }
+        },
+        {
+            "input": "http://example.com/path/script.html#fragment?data",
+            "expected_output": {
+                "scheme": "http",
+                "host": "example.com",
+                "path": "/path/script.html",
+                "fragment": "fragment?data",
+                "user": "",
+                "password": "",
+                "port": "",
+                "query": ""
+            }
+        },
+        {
+            "input": ":",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user:pass@host",
+            "expected_output": {
+                "scheme": "http",
+                "host": "host",
+                "user": "user",
+                "password": "pass",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//user:pass@host",
+            "expected_output": {
+                "host": "host",
+                "user": "user",
+                "password": "pass",
+                "scheme": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//user@host",
+            "expected_output": {
+                "host": "host",
+                "user": "user",
+                "scheme": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//example.org:81/hi?a=b#c=d",
+            "expected_output": {
+                "host": "example.org",
+                "port": 81,
+                "path": "/hi",
+                "query": "a=b",
+                "fragment": "c=d",
+                "scheme": "",
+                "user": "",
+                "password": ""
+            }
+        },
+        {
+            "input": "//example.org/hi?a=b#c=d",
+            "expected_output": {
+                "host": "example.org",
+                "path": "/hi",
+                "query": "a=b",
+                "fragment": "c=d",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "port": ""
+            }
+        },
+        {
+            "input": "/busca/?fq=B:20001",
+            "expected_output": {
+                "path": "/busca/",
+                "query": "fq=B:20001",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/busca/?fq=B:200013",
+            "expected_output": {
+                "path": "/busca/",
+                "query": "fq=B:200013",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/busca/?fq=home:01234",
+            "expected_output": {
+                "path": "/busca/",
+                "query": "fq=home:01234",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/busca/?fq=home:012345",
+            "expected_output": {
+                "path": "/busca/",
+                "query": "fq=home:012345",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://example.com:80#@google.com/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "example.com",
+                "port": 80,
+                "fragment": "@google.com/",
+                "user": "",
+                "password": "",
+                "path": "",
+                "query": ""
+            }
+        },
+        {
+            "input": "http://example.com:80?@google.com/",
+            "expected_output": {
+                "scheme": "http",
+                "host": "example.com",
+                "port": 80,
+                "query": "@google.com/",
+                "user": "",
+                "password": "",
+                "path": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//php.net/path?query=1:2",
+            "expected_output": {
+                "host": "php.net",
+                "path": "/path",
+                "query": "query=1:2",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//php.net/path.php?query=a:b",
+            "expected_output": {
+                "host": "php.net",
+                "path": "/path.php",
+                "query": "query=a:b",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//username@php.net/path?query=1:2",
+            "expected_output": {
+                "host": "php.net",
+                "user": "username",
+                "path": "/path",
+                "query": "query=1:2",
+                "scheme": "",
+                "password": "",
+                "port": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//example.org",
+            "expected_output": {
+                "host": "example.org",
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        }
+    ]
+}

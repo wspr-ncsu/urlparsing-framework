@@ -1,0 +1,1315 @@
+URL,urllib3,chrome
+HIGH SEVERITY,52
+"""[2a00:1450:4001:c01::67]""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[2a00:1450:4001:c01::67]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""[2a00"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""1450:4001:c01::67]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""[::1%25]""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[::1%25]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""["",
+ ""user"": """",
+ ""password"": """",
+ ""host"": "":1%25]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""[::Ff%etH0%Ff]/%ab%Af""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[::ff%eth0%ff]"",
+ ""port"": """",
+ ""path"": ""/%ab%af"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""["",
+ ""user"": """",
+ ""password"": """",
+ ""host"": "":Ff%etH0%Ff]"",
+ ""port"": """",
+ ""path"": ""/%ab%Af"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://user:pass@[AaAa::Ff%25etH0%Ff]/%ab%Af""","{
+ ""scheme"": ""http"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""[aaaa::ff%eth0%ff]"",
+ ""port"": """",
+ ""path"": ""/%ab%af"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""[AaAa::Ff%25etH0%Ff]"",
+ ""port"": """",
+ ""path"": ""/%ab%Af"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://user\\u0000@example.com/path\\u0000?query\\u0000#fragment\\u0000""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%00"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%00"",
+ ""query"": ""query%00"",
+ ""fragment"": ""fragment%00""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0000@example.com/path\u0000"",
+ ""query"": ""query\u0000"",
+ ""fragment"": ""fragment\u0000""
+}"
+"""http://user\\u0001@example.com/path\\u0001?query\\u0001#fragment\\u0001""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%01"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%01"",
+ ""query"": ""query%01"",
+ ""fragment"": ""fragment%01""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0001@example.com/path\u0001"",
+ ""query"": ""query\u0001"",
+ ""fragment"": ""fragment\u0001""
+}"
+"""http://user\\u0002@example.com/path\\u0002?query\\u0002#fragment\\u0002""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%02"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%02"",
+ ""query"": ""query%02"",
+ ""fragment"": ""fragment%02""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0002@example.com/path\u0002"",
+ ""query"": ""query\u0002"",
+ ""fragment"": ""fragment\u0002""
+}"
+"""http://user\\u0003@example.com/path\\u0003?query\\u0003#fragment\\u0003""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%03"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%03"",
+ ""query"": ""query%03"",
+ ""fragment"": ""fragment%03""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0003@example.com/path\u0003"",
+ ""query"": ""query\u0003"",
+ ""fragment"": ""fragment\u0003""
+}"
+"""http://user\\u0004@example.com/path\\u0004?query\\u0004#fragment\\u0004""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%04"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%04"",
+ ""query"": ""query%04"",
+ ""fragment"": ""fragment%04""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0004@example.com/path\u0004"",
+ ""query"": ""query\u0004"",
+ ""fragment"": ""fragment\u0004""
+}"
+"""http://user\\u0005@example.com/path\\u0005?query\\u0005#fragment\\u0005""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%05"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%05"",
+ ""query"": ""query%05"",
+ ""fragment"": ""fragment%05""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0005@example.com/path\u0005"",
+ ""query"": ""query\u0005"",
+ ""fragment"": ""fragment\u0005""
+}"
+"""http://user\\u0006@example.com/path\\u0006?query\\u0006#fragment\\u0006""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%06"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%06"",
+ ""query"": ""query%06"",
+ ""fragment"": ""fragment%06""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0006@example.com/path\u0006"",
+ ""query"": ""query\u0006"",
+ ""fragment"": ""fragment\u0006""
+}"
+"""http://user\\u0007@example.com/path\\u0007?query\\u0007#fragment\\u0007""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%07"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%07"",
+ ""query"": ""query%07"",
+ ""fragment"": ""fragment%07""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0007@example.com/path\u0007"",
+ ""query"": ""query\u0007"",
+ ""fragment"": ""fragment\u0007""
+}"
+"""http://user\b@example.com/path\b?query\b#fragment\b""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%08"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%08"",
+ ""query"": ""query%08"",
+ ""fragment"": ""fragment%08""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\b@example.com/path\b"",
+ ""query"": ""query\b"",
+ ""fragment"": ""fragment\b""
+}"
+"""http://user\\u000b@example.com/path\\u000b?query\\u000b#fragment\\u000b""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%0b"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%0b"",
+ ""query"": ""query%0b"",
+ ""fragment"": ""fragment%0b""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u000b@example.com/path\u000b"",
+ ""query"": ""query\u000b"",
+ ""fragment"": ""fragment\u000b""
+}"
+"""http://user\f@example.com/path\f?query\f#fragment\f""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%0c"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%0c"",
+ ""query"": ""query%0c"",
+ ""fragment"": ""fragment%0c""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\f@example.com/path\f"",
+ ""query"": ""query\f"",
+ ""fragment"": ""fragment\f""
+}"
+"""http://user\\u000e@example.com/path\\u000e?query\\u000e#fragment\\u000e""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%0e"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%0e"",
+ ""query"": ""query%0e"",
+ ""fragment"": ""fragment%0e""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u000e@example.com/path\u000e"",
+ ""query"": ""query\u000e"",
+ ""fragment"": ""fragment\u000e""
+}"
+"""http://user\\u000f@example.com/path\\u000f?query\\u000f#fragment\\u000f""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%0f"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%0f"",
+ ""query"": ""query%0f"",
+ ""fragment"": ""fragment%0f""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u000f@example.com/path\u000f"",
+ ""query"": ""query\u000f"",
+ ""fragment"": ""fragment\u000f""
+}"
+"""http://user\\u0010@example.com/path\\u0010?query\\u0010#fragment\\u0010""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%10"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%10"",
+ ""query"": ""query%10"",
+ ""fragment"": ""fragment%10""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0010@example.com/path\u0010"",
+ ""query"": ""query\u0010"",
+ ""fragment"": ""fragment\u0010""
+}"
+"""http://user\\u0011@example.com/path\\u0011?query\\u0011#fragment\\u0011""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%11"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%11"",
+ ""query"": ""query%11"",
+ ""fragment"": ""fragment%11""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0011@example.com/path\u0011"",
+ ""query"": ""query\u0011"",
+ ""fragment"": ""fragment\u0011""
+}"
+"""http://user\\u0012@example.com/path\\u0012?query\\u0012#fragment\\u0012""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%12"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%12"",
+ ""query"": ""query%12"",
+ ""fragment"": ""fragment%12""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0012@example.com/path\u0012"",
+ ""query"": ""query\u0012"",
+ ""fragment"": ""fragment\u0012""
+}"
+"""http://user\\u0013@example.com/path\\u0013?query\\u0013#fragment\\u0013""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%13"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%13"",
+ ""query"": ""query%13"",
+ ""fragment"": ""fragment%13""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0013@example.com/path\u0013"",
+ ""query"": ""query\u0013"",
+ ""fragment"": ""fragment\u0013""
+}"
+"""http://user\\u0014@example.com/path\\u0014?query\\u0014#fragment\\u0014""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%14"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%14"",
+ ""query"": ""query%14"",
+ ""fragment"": ""fragment%14""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0014@example.com/path\u0014"",
+ ""query"": ""query\u0014"",
+ ""fragment"": ""fragment\u0014""
+}"
+"""http://user\\u0015@example.com/path\\u0015?query\\u0015#fragment\\u0015""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%15"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%15"",
+ ""query"": ""query%15"",
+ ""fragment"": ""fragment%15""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0015@example.com/path\u0015"",
+ ""query"": ""query\u0015"",
+ ""fragment"": ""fragment\u0015""
+}"
+"""http://user\\u0016@example.com/path\\u0016?query\\u0016#fragment\\u0016""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%16"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%16"",
+ ""query"": ""query%16"",
+ ""fragment"": ""fragment%16""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0016@example.com/path\u0016"",
+ ""query"": ""query\u0016"",
+ ""fragment"": ""fragment\u0016""
+}"
+"""http://user\\u0017@example.com/path\\u0017?query\\u0017#fragment\\u0017""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%17"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%17"",
+ ""query"": ""query%17"",
+ ""fragment"": ""fragment%17""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0017@example.com/path\u0017"",
+ ""query"": ""query\u0017"",
+ ""fragment"": ""fragment\u0017""
+}"
+"""http://user\\u0018@example.com/path\\u0018?query\\u0018#fragment\\u0018""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%18"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%18"",
+ ""query"": ""query%18"",
+ ""fragment"": ""fragment%18""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0018@example.com/path\u0018"",
+ ""query"": ""query\u0018"",
+ ""fragment"": ""fragment\u0018""
+}"
+"""http://user\\u0019@example.com/path\\u0019?query\\u0019#fragment\\u0019""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%19"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%19"",
+ ""query"": ""query%19"",
+ ""fragment"": ""fragment%19""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u0019@example.com/path\u0019"",
+ ""query"": ""query\u0019"",
+ ""fragment"": ""fragment\u0019""
+}"
+"""http://user\\u001a@example.com/path\\u001a?query\\u001a#fragment\\u001a""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%1a"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%1a"",
+ ""query"": ""query%1a"",
+ ""fragment"": ""fragment%1a""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u001a@example.com/path\u001a"",
+ ""query"": ""query\u001a"",
+ ""fragment"": ""fragment\u001a""
+}"
+"""http://user\\u001b@example.com/path\\u001b?query\\u001b#fragment\\u001b""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%1b"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%1b"",
+ ""query"": ""query%1b"",
+ ""fragment"": ""fragment%1b""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u001b@example.com/path\u001b"",
+ ""query"": ""query\u001b"",
+ ""fragment"": ""fragment\u001b""
+}"
+"""http://user\\u001c@example.com/path\\u001c?query\\u001c#fragment\\u001c""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%1c"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%1c"",
+ ""query"": ""query%1c"",
+ ""fragment"": ""fragment%1c""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u001c@example.com/path\u001c"",
+ ""query"": ""query\u001c"",
+ ""fragment"": ""fragment\u001c""
+}"
+"""http://user\\u001d@example.com/path\\u001d?query\\u001d#fragment\\u001d""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%1d"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%1d"",
+ ""query"": ""query%1d"",
+ ""fragment"": ""fragment%1d""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u001d@example.com/path\u001d"",
+ ""query"": ""query\u001d"",
+ ""fragment"": ""fragment\u001d""
+}"
+"""http://user\\u001e@example.com/path\\u001e?query\\u001e#fragment\\u001e""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%1e"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%1e"",
+ ""query"": ""query%1e"",
+ ""fragment"": ""fragment%1e""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u001e@example.com/path\u001e"",
+ ""query"": ""query\u001e"",
+ ""fragment"": ""fragment\u001e""
+}"
+"""http://user\\u001f@example.com/path\\u001f?query\\u001f#fragment\\u001f""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%1f"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%1f"",
+ ""query"": ""query%1f"",
+ ""fragment"": ""fragment%1f""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u001f@example.com/path\u001f"",
+ ""query"": ""query\u001f"",
+ ""fragment"": ""fragment\u001f""
+}"
+"""http://user\\u007f@example.com/path\\u007f?query\\u007f#fragment\\u007f""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%7f"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%7f"",
+ ""query"": ""query%7f"",
+ ""fragment"": ""fragment%7f""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""user"",
+ ""port"": """",
+ ""path"": ""\u007f@example.com/path\u007f"",
+ ""query"": ""query\u007f"",
+ ""fragment"": ""fragment\u007f""
+}"
+"""/foo""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/foo"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/foo?bar=baz""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/foo"",
+ ""query"": ""bar=baz"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""bar=baz"",
+ ""fragment"": """"
+}"
+"""/foo?bar=baz#banana?apple/orange""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/foo"",
+ ""query"": ""bar=baz"",
+ ""fragment"": ""banana?apple/orange""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""bar=baz"",
+ ""fragment"": ""banana?apple/orange""
+}"
+"""/redirect?target=http://localhost:61020/""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/redirect"",
+ ""query"": ""target=http://localhost:61020/"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""/redirect?target=http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""localhost"",
+ ""port"": ""61020"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/abc/../def""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/def"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""abc"",
+ ""port"": """",
+ ""path"": ""/../def"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://K\\u00f6nigsg\\u00e4\\u00dfchen.de/stra\\u00dfe""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""xn--knigsgchen-b4a3dun.de"",
+ ""port"": """",
+ ""path"": ""/stra%c3%9fe"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""K"",
+ ""port"": """",
+ ""path"": ""\u00f6nigsg\u00e4\u00dfchen.de/stra\u00dfe"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/abc/../def""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/def"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""abc"",
+ ""port"": """",
+ ""path"": ""/../def"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/..""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/./abc/./def/""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/abc/def/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""."",
+ ""port"": """",
+ ""path"": ""/abc/./def/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/.""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/./""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""."",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/abc/./.././d/././e/.././f/./../../ghi""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/ghi"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""abc"",
+ ""port"": """",
+ ""path"": ""/./.././d/././e/.././f/./../../ghi"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/foo?bar=baz""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/foo"",
+ ""query"": ""bar=baz"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""bar=baz"",
+ ""fragment"": """"
+}"
+"""google.com:12345""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": 12345,
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""google.com"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""12345"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""javascript:a='@google.com:12345/';alert(0)""","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a='@google.com:12345/';alert(0)"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""javascript"",
+ ""user"": ""a='"",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": ""12345"",
+ ""path"": ""/';alert(0)"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://\\u30d2:\\u30ad@\\u30d2.abc.\\u30cb/\\u30d2?\\u30ad#\\u30ef""","{
+ ""scheme"": ""http"",
+ ""user"": ""%e3%83%92"",
+ ""password"": ""%e3%82%ad"",
+ ""host"": ""xn--pdk.abc.xn--idk"",
+ ""port"": """",
+ ""path"": ""/%e3%83%92"",
+ ""query"": ""%e3%82%ad"",
+ ""fragment"": ""%e3%83%af""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""u30d2"",
+ ""port"": """",
+ ""path"": ""\u30ad@\u30d2.abc.\u30cb/\u30d2"",
+ ""query"": ""\u30ad"",
+ ""fragment"": ""\u30ef""
+}"
+"""10.251.0.83:7777?a=1 HTTP/1.1\r\nX-injected: header""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""10.251.0.83"",
+ ""port"": 7777,
+ ""path"": """",
+ ""query"": ""a=1%20http/1.1%0d%0ax-injected:%20header"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""10.251.0.83"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""7777"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""a=1 HTTP/1.1\r\nX-injected: header"",
+ ""fragment"": """"
+}"
+"""https://user:pass@xdavidhu.me\\test.corp.google.com:8080/path/to/something?param=value#hash""","{
+ ""scheme"": ""https"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""xdavidhu.me"",
+ ""port"": """",
+ ""path"": ""/%5ctest.corp.google.com:8080/path/to/something"",
+ ""query"": ""param=value"",
+ ""fragment"": ""hash""
+}","{
+ ""scheme"": ""https"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""xdavidhu.me\test.corp.google.com"",
+ ""port"": ""8080"",
+ ""path"": ""/path/to/something"",
+ ""query"": ""param=value"",
+ ""fragment"": ""hash""
+}"
+
+LOW SEVERITY,17
+"""http://user@domain.com:password@example.com/~tilde@?@""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%40domain.com"",
+ ""password"": ""password"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/~tilde@"",
+ ""query"": ""@"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user@domain.com"",
+ ""password"": ""password"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/~tilde@"",
+ ""query"": ""@"",
+ ""fragment"": """"
+}"
+"""http://google.com/p[]?parameter[]=\""hello\""#fragment#""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": ""/p%5b%5d"",
+ ""query"": ""parameter%5b%5d=%22hello%22"",
+ ""fragment"": ""fragment%23""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": ""/p[]"",
+ ""query"": ""parameter[]=\""hello\"""",
+ ""fragment"": ""fragment#""
+}"
+"""http://user\t@example.com/path\t?query\t#fragment\t""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%09"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%09"",
+ ""query"": ""query%09"",
+ ""fragment"": ""fragment%09""
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user "",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path "",
+ ""query"": ""query  "",
+ ""fragment"": ""fragment""
+}"
+"""http://user\n@example.com/path\n?query\n#fragment\n""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%0a"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%0a"",
+ ""query"": ""query%0a"",
+ ""fragment"": ""fragment%0a""
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user\r\n"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path\r\n"",
+ ""query"": ""query\r\n"",
+ ""fragment"": ""fragment""
+}"
+"""http://user\r@example.com/path\r?query\r#fragment\r""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%0d"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%0d"",
+ ""query"": ""query%0d"",
+ ""fragment"": ""fragment%0d""
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user\r\n"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path\r\n"",
+ ""query"": ""query\r\n"",
+ ""fragment"": ""fragment""
+}"
+"""http://user @example.com/path ?query #fragment ""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%20"",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path%20"",
+ ""query"": ""query%20"",
+ ""fragment"": ""fragment%20""
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user "",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/path "",
+ ""query"": ""query "",
+ ""fragment"": ""fragment""
+}"
+"""/""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://user@email.com:password@example.com/""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%40email.com"",
+ ""password"": ""password"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user@email.com"",
+ ""password"": ""password"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://user\"":quoted@example.com/""","{
+ ""scheme"": ""http"",
+ ""user"": ""user%22"",
+ ""password"": ""quoted"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user\"""",
+ ""password"": ""quoted"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://google.com/\\ud800""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": ""/%ed%a0%80"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": ""/\ud800"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://google.com?q=\\udc00""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""q=%ed%b0%80"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""q=\udc00"",
+ ""fragment"": """"
+}"
+"""http://google.com#\\udc00""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""%ed%b0%80""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""\udc00""
+}"
+"""/""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/""","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://google.com/\\uff2e\\uff2e/abc""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": ""/%ef%bc%ae%ef%bc%ae/abc"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""google.com"",
+ ""port"": """",
+ ""path"": ""/\uff2e\uff2e/abc"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://127.0.0.1:6379?\r\nSET test failure12\r\n:8080/test/?test=a""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""127.0.0.1"",
+ ""port"": 6379,
+ ""path"": """",
+ ""query"": ""%0d%0aset%20test%20failure12%0d%0a:8080/test/?test=a"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""127.0.0.1"",
+ ""port"": ""6379"",
+ ""path"": """",
+ ""query"": ""\r\nSET test failure12\r\n:8080/test/?test=a"",
+ ""fragment"": """"
+}"
+"""https://user:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@example.com""","{
+ ""scheme"": ""https"",
+ ""user"": ""user"",
+ ""password"": ""%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": ""user"",
+ ""password"": ""@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"

@@ -1,0 +1,1431 @@
+URL,url-parse,php
+//,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+/foo?foo=bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /foo
+    [query] => foo=bar
+    [fragment] => 
+)
+","Array
+(
+    [path] => /foo
+    [query] => foo=bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+/unshiftio/url-parse,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => gist.github.com
+    [port] => 
+    [path] => /unshiftio/url-parse
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /unshiftio/url-parse
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+HTTP://fOo.eXaMPle.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => HTTP
+    [host] => fOo.eXaMPle.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+HTTP://X.COM/Y/Z,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => x.com
+    [port] => 
+    [path] => /Y/Z
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => HTTP
+    [host] => X.COM
+    [path] => /Y/Z
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com:80,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [port] => 80
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/dataApi/PROD/ws,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => localhost
+    [port] => 3000
+    [path] => /dataApi/PROD/ws
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /dataApi/PROD/ws
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/sections/?project=default,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /sections/
+    [query] => project=default
+    [fragment] => 
+)
+","Array
+(
+    [path] => /sections/
+    [query] => project=default
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"http://google.com:80\@yahoo.com/#what\is going on","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /@yahoo.com/
+    [query] => 
+    [fragment] => what\is going on
+)
+","Array
+(
+    [scheme] => http
+    [host] => yahoo.com
+    [user] => google.com
+    [path] => /
+    [fragment] => what\is going on
+    [password] => 80\
+    [port] => 
+    [query] => 
+)
+"
+"http://yolo.com\what-is-up.com","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => yolo.com
+    [port] => 
+    [path] => /what-is-up.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => yolo.com\what-is-up.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://google.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => google.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+////what-is-up.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => what-is-up.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"\\\\what-is-up.com","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => what-is-up.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \\\\what-is-up.com
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"https:\/github.com/foo/bar","Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => \/github.com/foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"https:/\/\/\github.com/foo/bar","Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => /\/\/\github.com/foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https:/github.com/foo/bar,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => /github.com/foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"https:\github.com/foo/bar","Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => \github.com/foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https:github.com/foo/bar,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => github.com/foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+foo:///example.com,"Array
+(
+    [scheme] => foo
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /example.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"\\example.com/foo/bar","Array
+(
+    [scheme] => foo
+    [user] => 
+    [password] => 
+    [host] => bar.com
+    [port] => 
+    [path] => /\\example.com/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \\example.com/foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//example.com,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //example.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => example.com
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => sub.example.com
+    [port] => 
+    [path] => /foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /foo
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://google.com:80/pathname,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /pathname
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => google.com
+    [port] => 80
+    [path] => /pathname
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+HTTP://gOogle.cOm:80/pathname,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /pathname
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => HTTP
+    [host] => gOogle.cOm
+    [port] => 80
+    [path] => /pathname
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+http://google.com:80/pathname,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /pathname
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => google.com
+    [port] => 80
+    [path] => /pathname
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://google.com:80,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => google.com
+    [port] => 80
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://google.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => google.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://google.com:443/pathname,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /pathname
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => google.com
+    [port] => 443
+    [path] => /pathname
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws://google.com:80/pathname,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /pathname
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [host] => google.com
+    [port] => 80
+    [path] => /pathname
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss://google.com:443/pathname,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => google.com
+    [port] => 
+    [path] => /pathname
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => google.com
+    [port] => 443
+    [path] => /pathname
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+HTTP://example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => HTTP
+    [host] => example.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => file
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"file://c:\foo\bar\","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /c:/foo/bar/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+foo/bar,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[1080:0:0:0:8:800:200C:417A]:61616/foo/bar?q=z,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [1080:0:0:0:8:800:200c:417a]
+    [port] => 61616
+    [path] => /foo/bar
+    [query] => q=z
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [1080:0:0:0:8:800:200C:417A]
+    [port] => 61616
+    [path] => /foo/bar
+    [query] => q=z
+    [user] => 
+    [password] => 
+    [fragment] => 
+)
+"
+HTTP://USER:PASS@EXAMPLE.COM,"Array
+(
+    [scheme] => http
+    [user] => USER
+    [password] => PASS
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => HTTP
+    [host] => EXAMPLE.COM
+    [user] => USER
+    [password] => PASS
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://localhost,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => localhost
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => localhost
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /foo
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//foo.com/foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => foo.com
+    [path] => /foo
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://localhost,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => localhost
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => localhost
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+a,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /a
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => a
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+a/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /a/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => a/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+b/c,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /b/c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => b/c
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+.,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => .
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+./,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ./
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+./.,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ./.
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+./b,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /a/b
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ./b
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../../../../c,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../../../../c
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+./../d,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /a/d
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ./../d
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+d/e/f/./../../g,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /a/b/d/g
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => d/e/f/./../../g
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => sub.example.com
+    [port] => 
+    [path] => /foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /foo
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo:bar@sub.example.com,"Array
+(
+    [scheme] => http
+    [user] => foo
+    [password] => bar
+    [host] => sub.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => sub.example.com
+    [user] => foo
+    [password] => bar
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://example.com,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => example.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://foo:bar@example.com,"Array
+(
+    [scheme] => https
+    [user] => foo
+    [password] => bar
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => example.com
+    [user] => foo
+    [password] => bar
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"

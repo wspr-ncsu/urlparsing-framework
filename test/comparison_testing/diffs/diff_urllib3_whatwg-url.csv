@@ -1,0 +1,7210 @@
+URL,whatwg-url,urllib3
+HIGH SEVERITY,208
+"""http://example\t.\norg""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example\t.\norg"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://user:pass@foo:21/bar;par?b#c""","{
+ ""scheme"": ""http"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""foo"",
+ ""port"": ""21"",
+ ""path"": ""/bar;par"",
+ ""query"": ""b"",
+ ""fragment"": ""c""
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""user:pass"",
+ ""host"": ""foo"",
+ ""port"": 21,
+ ""path"": ""/bar;par"",
+ ""query"": ""b"",
+ ""fragment"": ""c""
+}"
+"""http:foo.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/foo.com"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/foo.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""" foo.com  ""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/foo.com"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "" foo.com  "",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://f:21/ b ? d # e ""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""f"",
+ ""port"": ""21"",
+ ""path"": ""/%20b%20"",
+ ""query"": ""%20d%20"",
+ ""fragment"": ""%20e""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""f"",
+ ""port"": 21,
+ ""path"": ""/%20b%20"",
+ ""query"": ""%20d%20"",
+ ""fragment"": ""%20e%20""
+}"
+"""http://f:0/c""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""f"",
+ ""port"": ""0"",
+ ""path"": ""/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""f"",
+ ""port"": 0,
+ ""path"": ""/c"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""  \t""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""  \t"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""":""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""":/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""":\\""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""":#""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""#""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""#/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": ""/""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""/""
+}"
+"""#\\""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": ""\\""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""%5C""
+}"
+"""#;?""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": "";?""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": "";?""
+}"
+"""?""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""":23""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:23"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": 23,
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/:23""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/:23"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/:23"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\\x""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/x"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5Cx"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\\\\x\\hello""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""x"",
+ ""port"": """",
+ ""path"": ""/hello"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C%5Cx%5Chello"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://a:b@c:29/d""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": ""b"",
+ ""host"": ""c"",
+ ""port"": ""29"",
+ ""path"": ""/d"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""a:b"",
+ ""host"": ""c"",
+ ""port"": 29,
+ ""path"": ""/d"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http::@c:29""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:@c:29"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/:@c:29"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://&a:foo(b]c@d:2/""","{
+ ""scheme"": ""http"",
+ ""user"": ""&a"",
+ ""password"": ""foo(b%5Dc"",
+ ""host"": ""d"",
+ ""port"": ""2"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""&a:foo(b%5Dc"",
+ ""host"": ""d"",
+ ""port"": 2,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://::@c@d:2""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": ""%3A%40c"",
+ ""host"": ""d"",
+ ""port"": ""2"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""::%40c"",
+ ""host"": ""d"",
+ ""port"": 2,
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:\\\\foo.com\\""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C%5Cfoo.com%5C"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:\\\\a\\b:c\\d@foo.com\\""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""a"",
+ ""port"": """",
+ ""path"": ""/b:c/d@foo.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C%5Ca%5Cb:c%5Cd@foo.com%5C"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:[61:27]/:foo""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/[61:27]/:foo"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5B61:27%5D/:foo"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://[::127.0.0.1]""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[::7f00:1]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[::127.0.0.1]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://[0:0:0:0:0:0:13.1.68.3]""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[::d01:4403]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[0:0:0:0:0:0:13.1.68.3]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://[2001::1]:80""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[2001::1]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[2001::1]"",
+ ""port"": 80,
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:/example.com/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp:/example.com/""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https:/example.com/""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws:/example.com/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss:/example.com/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:example.com/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp:example.com/""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https:example.com/""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws:example.com/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss:example.com/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/a/b/c""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/a/b/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a/b/c"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/a/ /c""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/a/%20/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a/%20/c"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/a%2fc""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/a%2fc"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a%2Fc"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/a/%2f/c""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/a/%2f/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a/%2F/c"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""#\u03b2""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": ""%ce%b2""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""%CE%B2""
+}"
+"""C|/foo/bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//C|/foo/bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\\\\server\\file""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""server"",
+ ""port"": """",
+ ""path"": ""/file"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C%5Cserver%5Cfile"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/\\server/file""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""server"",
+ ""port"": """",
+ ""path"": ""/file"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5Cserver/file"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://localhost""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://localhost/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://localhost/test""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""test""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/tmp/mock/test"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://192.0x00A80001""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.0.1"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""192.0x00a80001"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:\\\\www.google.com\\foo""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.google.com"",
+ ""port"": """",
+ ""path"": ""/foo"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C%5Cwww.google.com%5Cfoo"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://foo:80/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://foo:81/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""81"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 81,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""httpa://foo:80/""","{
+ ""scheme"": ""httpa:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""80"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""httpa"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://foo:443/""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 443,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://foo:80/""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""80"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp://foo:21/""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 21,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp://foo:80/""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""80"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""gopher://foo:70/""","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""70"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 70,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""gopher://foo:443/""","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""443"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 443,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws://foo:80/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws://foo:81/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""81"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 81,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws://foo:443/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""443"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 443,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws://foo:815/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""815"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 815,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss://foo:80/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""80"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss://foo:81/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""81"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 81,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss://foo:443/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 443,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss://foo:815/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": ""815"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": 815,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:/example.com/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp:/example.com/""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https:/example.com/""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws:/example.com/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss:/example.com/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:example.com/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp:example.com/""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https:example.com/""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ws:example.com/""","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ws"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss:example.com/""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:/@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:a:b@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": ""b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a:b@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:/a:b@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": ""b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a:b@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http::b@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": ""b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/:b@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:/:b@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": ""b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/:b@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:a:@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a:@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http:/a:@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a:@www.example.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+""".""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""..""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""test.txt"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""./test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""."",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../aaa/test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/aaa/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/aaa/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../../test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\u4e2d/test.txt""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/%e4%b8%ad/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""xn--fiq"",
+ ""port"": """",
+ ""path"": ""/test.txt"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\u0000\u001b\u0004\u0012 http://example.com/\u001f \r ""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""\u0000\u001b\u0004\u0012 http"",
+ ""port"": """",
+ ""path"": ""//example.com/%1F%20%0D%20"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc://fa\u00df.ExAmPlE/""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""fa%c3%9f.example"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": ""fa\u00df.ExAmPlE"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://%30%78%63%30%2e%30%32%35%30.01""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.0.1"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""%30%78%63%30%2e%30%32%35%30.01"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://%30%78%63%30%2e%30%32%35%30.01%2e""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.0.1"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""%30%78%63%30%2e%30%32%35%30.01%2e"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://@test@test@example:800/""","{
+ ""scheme"": ""https"",
+ ""user"": ""%40test%40test"",
+ ""password"": """",
+ ""host"": ""example"",
+ ""port"": ""800"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": ""%40test%40test"",
+ ""host"": ""example"",
+ ""port"": 800,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/some/path""","{
+ ""scheme"": ""http"",
+ ""user"": ""user"",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/some/path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/some/path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""""","{
+ ""scheme"": ""http"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""example.org"",
+ ""port"": ""21"",
+ ""path"": ""/smth"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/some/path""","{
+ ""scheme"": ""http"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""example.org"",
+ ""port"": ""21"",
+ ""path"": ""/some/path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/some/path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pa/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""i"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ho"",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""i"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pa/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""i"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ho"",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ho"",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""?i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ho"",
+ ""port"": """",
+ ""path"": ""/pa"",
+ ""query"": ""i"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""i"",
+ ""fragment"": """"
+}"
+"""#i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ho"",
+ ""port"": """",
+ ""path"": ""/pa"",
+ ""query"": """",
+ ""fragment"": ""i""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""i""
+}"
+"""sc://\u00f1.test/""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1.test"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": ""\u00f1.test"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""x""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1"",
+ ""port"": """",
+ ""path"": ""/x"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""x"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://ho\tst/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": ""ho\tst"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://ho\nst/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": ""ho\nst"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://ho\rst/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": ""ho\rst"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://ho\tst/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""ho\tst"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://ho\nst/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""ho\nst"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://ho\rst/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""ho\rst"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftp://%e2%98%83""","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""xn--n3h"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftp"",
+ ""user"": """",
+ ""host"": ""%e2%98%83"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://%e2%98%83""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""xn--n3h"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": ""%e2%98%83"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://127.0.0.1:10100/relative_import.html""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""127.0.0.1"",
+ ""port"": ""10100"",
+ ""path"": ""/relative_import.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""127.0.0.1"",
+ ""port"": 10100,
+ ""path"": ""/relative_import.html"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://localhost:3000/jqueryui@1.2.3""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""localhost"",
+ ""port"": ""3000"",
+ ""path"": ""/jqueryui@1.2.3"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": 3000,
+ ""path"": ""/jqueryui@1.2.3"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""h\tt\nt\rp://h\to\ns\rt:9\t0\n0\r0/p\ta\nt\rh?q\tu\ne\rry#f\tr\na\rg""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": ""9000"",
+ ""path"": ""/path"",
+ ""query"": ""query"",
+ ""fragment"": ""frag""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""h\tt\nt\rp"",
+ ""port"": """",
+ ""path"": ""//h%09o%0As%0Dt:9%090%0A0%0D0/p%09a%0At%0Dh"",
+ ""query"": ""q%09u%0Ae%0Dry"",
+ ""fragment"": ""f%09r%0Aa%0Dg""
+}"
+"""?a=b&c=d""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": ""a=b&c=d"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""a=b&c=d"",
+ ""fragment"": """"
+}"
+"""??a=b&c=d""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": ""?a=b&c=d"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""?a=b&c=d"",
+ ""fragment"": """"
+}"
+"""http""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""http"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://1.2.3.4./""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""1.2.3.4"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""1.2.3.4."",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://192.168.257""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.1.1"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""192.168.257"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://192.168.257.""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.1.1"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""192.168.257."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://256""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""0.0.1.0"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""256"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://999999999""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""59.154.201.255"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""999999999"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://999999999.""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""59.154.201.255"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""999999999."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://4294967295""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""255.255.255.255"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""4294967295"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://0xffffffff""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""255.255.255.255"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""0xffffffff"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://0x.0x.0""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""0.0.0.0"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": ""0x.0x.0"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""pix/submit.gif""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/users/domenic/dropbox/github/tmpvar/jsdom/test/level2/html/files/pix/submit.gif"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""pix"",
+ ""port"": """",
+ ""path"": ""/submit.gif"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""..""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""..""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""h"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""h"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//d:""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/d:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""d"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//d:/..""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/d:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""d"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""..""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""..""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""test"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""file"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://localhost//a//../..//""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": ""//a//../..//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//localhost//pig""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": ""//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/..//localhost//pig""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""lion"",
+ ""port"": """",
+ ""path"": ""//localhost//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/localhost//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/rooibos""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""tea"",
+ ""port"": """",
+ ""path"": ""/rooibos"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/rooibos"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/?chai""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""tea"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""chai"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""chai"",
+ ""fragment"": """"
+}"
+"""C|""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|#""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|?""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|\n/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|\n"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|\\""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": ""/%5C"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|a""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/c|a"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|a"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/c:/foo/bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""C|/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c|"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/C:/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/C:/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:C:/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/C:/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:/C:/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/C:/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//C:/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""c"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://C:/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""C"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://C|/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""C|"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""file"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://localhost//a//../..//foo""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///foo"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": ""//a//../..//foo"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://localhost////foo""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""////foo"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": """",
+ ""path"": ""////foo"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://[1:0::]""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[1::]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[1:0::]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc://\u00f1""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": ""\u00f1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc://\u00f1?x""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""x"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": ""\u00f1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""x"",
+ ""fragment"": """"
+}"
+"""sc://\u00f1#x""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": ""\u00f1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""#x""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""?x""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%c3%b1"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""x"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""x"",
+ ""fragment"": """"
+}"
+"""telnet://user:pass@foobar.com:23/""","{
+ ""scheme"": ""telnet:"",
+ ""user"": ""user"",
+ ""password"": ""pass"",
+ ""host"": ""foobar.com"",
+ ""port"": ""23"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""telnet"",
+ ""user"": ""user:pass"",
+ ""host"": ""foobar.com"",
+ ""port"": 23,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ut2004://10.10.10.10:7777/Index.ut2""","{
+ ""scheme"": ""ut2004:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""10.10.10.10"",
+ ""port"": ""7777"",
+ ""path"": ""/index.ut2"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ut2004"",
+ ""user"": """",
+ ""host"": ""10.10.10.10"",
+ ""port"": 7777,
+ ""path"": ""/Index.ut2"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""redis://foo:bar@somehost:6379/0?baz=bam&qux=baz""","{
+ ""scheme"": ""redis:"",
+ ""user"": ""foo"",
+ ""password"": ""bar"",
+ ""host"": ""somehost"",
+ ""port"": ""6379"",
+ ""path"": ""/0"",
+ ""query"": ""baz=bam&qux=baz"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""redis"",
+ ""user"": ""foo:bar"",
+ ""host"": ""somehost"",
+ ""port"": 6379,
+ ""path"": ""/0"",
+ ""query"": ""baz=bam&qux=baz"",
+ ""fragment"": """"
+}"
+"""rsync://foo@host:911/sup""","{
+ ""scheme"": ""rsync:"",
+ ""user"": ""foo"",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": ""911"",
+ ""path"": ""/sup"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""rsync"",
+ ""user"": ""foo"",
+ ""host"": ""host"",
+ ""port"": 911,
+ ""path"": ""/sup"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""irc://myserver.com:6999/channel?passwd""","{
+ ""scheme"": ""irc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""myserver.com"",
+ ""port"": ""6999"",
+ ""path"": ""/channel"",
+ ""query"": ""passwd"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""irc"",
+ ""user"": """",
+ ""host"": ""myserver.com"",
+ ""port"": 6999,
+ ""path"": ""/channel"",
+ ""query"": ""passwd"",
+ ""fragment"": """"
+}"
+"""dns://fw.example.org:9999/foo.bar.org?type=TXT""","{
+ ""scheme"": ""dns:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""fw.example.org"",
+ ""port"": ""9999"",
+ ""path"": ""/foo.bar.org"",
+ ""query"": ""type=txt"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""dns"",
+ ""user"": """",
+ ""host"": ""fw.example.org"",
+ ""port"": 9999,
+ ""path"": ""/foo.bar.org"",
+ ""query"": ""type=TXT"",
+ ""fragment"": """"
+}"
+"""ldap://localhost:389/ou=People,o=JNDITutorial""","{
+ ""scheme"": ""ldap:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""localhost"",
+ ""port"": ""389"",
+ ""path"": ""/ou=people,o=jnditutorial"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ldap"",
+ ""user"": """",
+ ""host"": ""localhost"",
+ ""port"": 389,
+ ""path"": ""/ou=People,o=JNDITutorial"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""..//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""a/..//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""a"",
+ ""port"": """",
+ ""path"": ""/path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""path"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""../path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": "".."",
+ ""port"": """",
+ ""path"": ""/path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-special://[1:2:0:0:5:0:0:0]/""","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[1:2:0:0:5::]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""host"": ""[1:2:0:0:5:0:0:0]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-special://[1:2:0:0:0:0:0:3]/""","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[1:2::3]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""host"": ""[1:2:0:0:0:0:0:3]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-special://[1:2::3]:80/""","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[1:2::3]"",
+ ""port"": ""80"",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""host"": ""[1:2::3]"",
+ ""port"": 80,
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""test-a-colon-slash.html""","{
+ ""scheme"": ""a:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test-a-colon-slash.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""test-a-colon-slash.html"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""test-a-colon-slash-slash.html""","{
+ ""scheme"": ""a:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test-a-colon-slash-slash.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""test-a-colon-slash-slash.html"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""test-a-colon-slash-b.html""","{
+ ""scheme"": ""a:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test-a-colon-slash-b.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""test-a-colon-slash-b.html"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""test-a-colon-slash-slash-b.html""","{
+ ""scheme"": ""a:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""b"",
+ ""port"": """",
+ ""path"": ""/test-a-colon-slash-slash-b.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""test-a-colon-slash-slash-b.html"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""10.0.0.7:8080/foo.html""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/some/dir/10.0.0.7:8080/foo.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""10.0.0.7"",
+ ""port"": 8080,
+ ""path"": ""/foo.html"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""a!@$*=/foo.html""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/some/dir/a!@$*=/foo.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": ""a!"",
+ ""host"": ""$*="",
+ ""port"": """",
+ ""path"": ""/foo.html"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://a\u00adb/p""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ab"",
+ ""port"": """",
+ ""path"": ""/p"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""a\u00adb"",
+ ""port"": """",
+ ""path"": ""/p"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://a%C2%ADb/p""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""ab"",
+ ""port"": """",
+ ""path"": ""/p"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""a%C2%ADb"",
+ ""port"": """",
+ ""path"": ""/p"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""#link""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": ""link""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""link""
+}"
+
+LOW SEVERITY,199
+"""https://test:@test""","{
+ ""scheme"": ""https"",
+ ""user"": ""test"",
+ ""password"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": ""test:"",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://:@test""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": "":"",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-special://test:@test/x""","{
+ ""scheme"": ""non-special"",
+ ""user"": ""test"",
+ ""password"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/x"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-special"",
+ ""user"": ""test:"",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/x"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-special://:@test/x""","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/x"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-special"",
+ ""user"": "":"",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/x"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\t   :foo.com   \n""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:foo.com"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: \t   :foo.com   \n""
+}"
+"""a:\t foo.com""","{
+ ""scheme"": ""a:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": "" foo.com"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""a"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\t foo.com"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""lolscheme:x x#x x""","{
+ ""scheme"": ""lolscheme"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""x x"",
+ ""query"": """",
+ ""fragment"": ""x%20x""
+}","{
+ ""scheme"": ""lolscheme"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/x x"",
+ ""query"": """",
+ ""fragment"": ""x x""
+}"
+"""http://f:00000000000000/c""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""f"",
+ ""port"": ""0"",
+ ""path"": ""/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: http://f:00000000000000/c""
+}"
+"""http://f:00000000000000000000080/c""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""f"",
+ ""port"": """",
+ ""path"": ""/c"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: http://f:00000000000000000000080/c""
+}"
+""":foo.com/""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:foo.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: :foo.com/""
+}"
+""":foo.com\\""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:foo.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: :foo.com\\""
+}"
+""":a""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/:a"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: :a""
+}"
+"""::""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/::"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: ::""
+}"
+"""::23""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/::23"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: ::23""
+}"
+"""foo://""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://foo.com:b@d/""","{
+ ""scheme"": ""http"",
+ ""user"": ""foo.com"",
+ ""password"": ""b"",
+ ""host"": ""d"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""foo.com:b"",
+ ""host"": ""d"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://foo.com/\\@""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo.com"",
+ ""port"": """",
+ ""path"": ""//@"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""foo.com"",
+ ""port"": """",
+ ""path"": ""/%5C@"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo:/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo:/bar.com/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/bar.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/bar.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://///////""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///////"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///////"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://///////bar.com/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///////bar.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///////bar.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//foo/bar""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://foo/path;a??e#f#g""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/path;a"",
+ ""query"": ""?e"",
+ ""fragment"": ""f#g""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/path;a"",
+ ""query"": ""?e"",
+ ""fragment"": ""f%23g""
+}"
+"""[61:24:74]:98""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/foo/[61:24:74]:98"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: [61:24:74]:98""
+}"
+"""http://[2001::1]""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[2001::1]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[2001::1]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""madeupscheme:/example.com/""","{
+ ""scheme"": ""madeupscheme:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""madeupscheme"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""madeupscheme:example.com/""","{
+ ""scheme"": ""madeupscheme"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""madeupscheme"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftps:example.com/""","{
+ ""scheme"": ""ftps"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftps"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""gopher:example.com/""","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""data:example.com/""","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""javascript:example.com/""","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""mailto:example.com/""","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""data:text/html,test#test""","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""text/html,test"",
+ ""query"": """",
+ ""fragment"": ""test""
+}","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/text/html,test"",
+ ""query"": """",
+ ""fragment"": ""test""
+}"
+"""tel:1234567890""","{
+ ""scheme"": ""tel"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""1234567890"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""tel"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/1234567890"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:c:\\foo\\bar.html""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:\\foo\\bar.html"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""  File:c|////foo\\bar.html""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:////foo/bar.html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse:   File:c|////foo\\bar.html""
+}"
+"""/C|\\foo\\bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/C%7C%5Cfoo%5Cbar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//server/file""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""server"",
+ ""port"": """",
+ ""path"": ""/file"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""server"",
+ ""port"": """",
+ ""path"": ""/file"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""///""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""///test""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://test""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": ""test"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:test""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/tmp/mock/test"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo/%2e""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo/%2E"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo/%2e%2""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo/%2e%2"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo/%252E%252"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo/%2e./%2e%2e/.%2e/%2e.bar""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/%2e.bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo/%2E./%2E%2E/.%2E/%2E.bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo%""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%25"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo%2""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%2"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%252"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo%2zbar""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%2zbar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%252zbar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo%2\u00c2\u00a9zbar""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%2%c3%82%c2%a9zbar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%252%C3%82%C2%A9zbar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo\t\u0091%91""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%c2%91%91"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%09%C2%91%91"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/foo\tbar""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foobar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/foo%09bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com\\\\foo\\\\bar""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""//foo//bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/%5C%5Cfoo%5C%5Cbar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""data:test# \u00bb""","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""test"",
+ ""query"": """",
+ ""fragment"": ""%20%c2%bb""
+}","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": """",
+ ""fragment"": "" \u00bb""
+}"
+"""http://www.google.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.google.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""www.google.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://www/foo/%2E/html""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www"",
+ ""port"": """",
+ ""path"": ""/foo/html"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""www"",
+ ""port"": """",
+ ""path"": ""/foo/%2E/html"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://%25DOMAIN:foobar@foodomain.com/""","{
+ ""scheme"": ""http"",
+ ""user"": ""%25domain"",
+ ""password"": ""foobar"",
+ ""host"": ""foodomain.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""%25DOMAIN:foobar"",
+ ""host"": ""foodomain.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""madeupscheme:/example.com/""","{
+ ""scheme"": ""madeupscheme:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""madeupscheme"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""madeupscheme:example.com/""","{
+ ""scheme"": ""madeupscheme:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""madeupscheme"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""ftps:example.com/""","{
+ ""scheme"": ""ftps"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""ftps"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""gopher:example.com/""","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""gopher"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""data:example.com/""","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""javascript:example.com/""","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""mailto:example.com/""","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/example.com/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://a:b@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": ""b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""a:b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://@pple.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""pple.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""pple.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://:b@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": ""b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": "":b"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://a:@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""a"",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""a:"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://www.@pple.com""","{
+ ""scheme"": ""http"",
+ ""user"": ""www."",
+ ""password"": """",
+ ""host"": ""pple.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""www."",
+ ""host"": ""pple.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://:@www.example.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": "":"",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://www.example2.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example2.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""www.example2.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//www.example2.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example2.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""www.example2.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:..""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/.."",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://ExAmPlE.CoM""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://GOO\u200b\u2060\ufeffgoo.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""googoo.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: http://GOO\u200b\u2060\ufeffgoo.com""
+}"
+"""http://www.foo\u3002bar.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.foo.bar.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: http://www.foo\u3002bar.com""
+}"
+"""http://\uff27\uff4f.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""go.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: http://\uff27\uff4f.com""
+}"
+"""http://\u4f60\u597d\u4f60\u597d""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""xn--6qqa088eba"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""xn--6qqa088eba"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://\uff10\uff38\uff43\uff10\uff0e\uff10\uff12\uff15\uff10\uff0e\uff10\uff11""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.0.1"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: http://\uff10\uff38\uff43\uff10\uff0e\uff10\uff12\uff15\uff10\uff0e\uff10\uff11""
+}"
+"""http://foo:\ud83d\udca9@example.com/bar""","{
+ ""scheme"": ""http"",
+ ""user"": ""foo"",
+ ""password"": ""%F0%9F%92%A9"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""foo:%F0%9F%92%A9"",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""#""","{
+ ""scheme"": ""test:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""test"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""#x""","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""x@x.com"",
+ ""query"": """",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""#x""","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": "","",
+ ""query"": """",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""#x""","{
+ ""scheme"": ""about:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""blank"",
+ ""query"": """",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""#""","{
+ ""scheme"": ""test:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""test"",
+ ""query"": ""test"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://@@@example""","{
+ ""scheme"": ""https"",
+ ""user"": ""%40%40"",
+ ""password"": """",
+ ""host"": ""example"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": ""%40%40"",
+ ""host"": ""example"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://`{}:`{}@h/`{}?`{}""","{
+ ""scheme"": ""http"",
+ ""user"": ""%60%7b%7d"",
+ ""password"": ""%60%7B%7D"",
+ ""host"": ""h"",
+ ""port"": """",
+ ""path"": ""/%60%7b%7d"",
+ ""query"": ""`{}"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": ""%60%7B%7D:%60%7B%7D"",
+ ""host"": ""h"",
+ ""port"": """",
+ ""path"": ""/%60%7B%7D"",
+ ""query"": ""%60%7B%7D"",
+ ""fragment"": """"
+}"
+"""http://host/?'""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""%27"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""'"",
+ ""fragment"": """"
+}"
+"""notspecial://host/?'""","{
+ ""scheme"": ""notspecial:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""'"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""notspecial"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""'"",
+ ""fragment"": """"
+}"
+"""/i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/i"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""?i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pa/pa"",
+ ""query"": ""i"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""i"",
+ ""fragment"": """"
+}"
+"""?i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pa/pa"",
+ ""query"": ""i"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""i"",
+ ""fragment"": """"
+}"
+"""#i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""sd"",
+ ""query"": """",
+ ""fragment"": ""i""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""i""
+}"
+"""#i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""sd/sd"",
+ ""query"": """",
+ ""fragment"": ""i""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""i""
+}"
+"""#i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pa/pa"",
+ ""query"": """",
+ ""fragment"": ""i""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""i""
+}"
+"""#i""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pa/pa"",
+ ""query"": """",
+ ""fragment"": ""i""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""i""
+}"
+"""about:/../""","{
+ ""scheme"": ""about:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""about"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/../"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""data:/../""","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""data"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/../"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""javascript:/../""","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""javascript"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/../"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""mailto:/../""","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""mailto"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/../"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc://%/""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: sc://%/""
+}"
+"""sc:\\../""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""\\../"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\../"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc::a@example.net""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": "":a@example.net"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/:a@example.net"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wow:%NBD""","{
+ ""scheme"": ""wow:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""%nbd"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wow"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%NBD"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wow:%1G""","{
+ ""scheme"": ""wow:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""%1g"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wow"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%1G"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wow:\uffff""","{
+ ""scheme"": ""wow:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""%ef%bf%bf"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wow"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\uffff"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.com/\ud800\ud801\udffe\udfff\ufdd0\ufdcf\ufdef\ufdf0\ufffe\uffff?\ud800\ud801\udffe\udfff\ufdd0\ufdcf\ufdef\ufdf0\ufffe\uffff""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/%ef%bf%bd%f0%90%9f%be%ef%bf%bd%ef%b7%90%ef%b7%8f%ef%b7%af%ef%b7%b0%ef%bf%be%ef%bf%bf"",
+ ""query"": ""%ef%bf%bd%f0%90%9f%be%ef%bf%bd%ef%b7%90%ef%b7%8f%ef%b7%af%ef%b7%b0%ef%bf%be%ef%bf%bf"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.com"",
+ ""port"": """",
+ ""path"": ""/%ED%A0%80%F0%90%9F%BE%ED%BF%BF%EF%B7%90%EF%B7%8F%EF%B7%AF%EF%B7%B0%EF%BF%BE%EF%BF%BF"",
+ ""query"": ""%ED%A0%80%F0%90%9F%BE%ED%BF%BF%EF%B7%90%EF%B7%8F%EF%B7%AF%EF%B7%B0%EF%BF%BE%EF%BF%BF"",
+ ""fragment"": """"
+}"
+"""sc://\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\u000b\f\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f\u007f!\""$%&'()*+,-.;=_`{}~/""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%01%02%03%04%05%06%07%08%0B%0C%0E%0F%10%11%12%13%14%15%16%17%18%19%1A%1B%1C%1D%1E%1F%7F!\""$%&'()*+,-.;=_`{}~"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: sc://\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\u000b\f\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f\u007f!\""$%&'()*+,-.;=_`{}~/""
+}"
+"""sc:""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://192.168.257.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""192.168.257.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""192.168.257.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://256.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""256.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""256.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://999999999.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""999999999.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""999999999.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://10000000000.com""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""10000000000.com"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""10000000000.com"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""asdf://%43%7C/""","{
+ ""scheme"": ""asdf:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""%43%7c"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""asdf"",
+ ""user"": """",
+ ""host"": ""%43%7C"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""test"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""?x""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""x"",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""x"",
+ ""fragment"": """"
+}"
+"""file:?x""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""x"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""x"",
+ ""fragment"": """"
+}"
+"""#x""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""test"",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""file:#x""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""test"",
+ ""fragment"": ""x""
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""x""
+}"
+"""file:\\\\//""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\\\//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:\\\\\\\\""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\\\\\\\"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:\\\\\\\\?fox""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": ""fox"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\\\\\\\"",
+ ""query"": ""fox"",
+ ""fragment"": """"
+}"
+"""file:\\\\\\\\#guppy""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": ""guppy""
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\\\\\\\"",
+ ""query"": """",
+ ""fragment"": ""guppy""
+}"
+"""file:\\\\localhost//""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\\\localhost//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://\\/localhost//cat""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//localhost//cat"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\/localhost//cat"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/////mouse""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///mouse"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""///mouse"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\\//pig""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/pig"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""\\/localhost//pig""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/%5C/localhost//pig"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file://""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/c:/foo/bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/c|/foo/bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c%7C/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:\\c:\\foo\\bar""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/\\c:\\foo\\bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""///C:/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/C:/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:/C|/""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/c:/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/C|/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:?q=v""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": ""q=v"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": ""q=v"",
+ ""fragment"": """"
+}"
+"""file:#frag""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": ""frag""
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": ""frag""
+}"
+"""file:///./Y""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/y"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/./Y"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:///./Y:""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/y:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/./Y:"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:///./y""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/y"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/./y"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:///./y:""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/y:"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/./y:"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""//one/two""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""one"",
+ ""port"": """",
+ ""path"": ""/two"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": ""one"",
+ ""port"": """",
+ ""path"": ""/two"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""///one/two""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/one/two"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/one/two"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""////one/two""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//one/two"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//one/two"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:///.//""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/.//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:.//p""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//p"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/.//p"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""file:/.//p""","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//p"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""file"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/.//p"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc://?""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""sc://#""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""sc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""///""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""////""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""////x/""","{
+ ""scheme"": ""sc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//x/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//x/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""tftp://foobar.com/someconfig;mode=netascii""","{
+ ""scheme"": ""tftp:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foobar.com"",
+ ""port"": """",
+ ""path"": ""/someconfig;mode=netascii"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""tftp"",
+ ""user"": """",
+ ""host"": ""foobar.com"",
+ ""port"": """",
+ ""path"": ""/someconfig;mode=netascii"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""git://github.com/foo/bar.git""","{
+ ""scheme"": ""git:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""github.com"",
+ ""port"": """",
+ ""path"": ""/foo/bar.git"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""git"",
+ ""user"": """",
+ ""host"": ""github.com"",
+ ""port"": """",
+ ""path"": ""/foo/bar.git"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""git+https://github.com/foo/bar""","{
+ ""scheme"": ""git+https:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""github.com"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""git+https"",
+ ""user"": """",
+ ""host"": ""github.com"",
+ ""port"": """",
+ ""path"": ""/foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""urn:ietf:rfc:2648""","{
+ ""scheme"": ""urn:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""ietf:rfc:2648"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""urn"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/ietf:rfc:2648"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""tag:joe@example.org,2001:foo/bar""","{
+ ""scheme"": ""tag:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""joe@example.org,2001:foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""tag"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/joe@example.org,2001:foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-spec:/.//""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/.//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-spec:/..//""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/..//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-spec:/a/..//""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a/..//"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-spec:/.//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/.//path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-spec:/..//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/..//path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""non-spec:/a/..//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/a/..//path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/.//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""/..//path""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//path"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/path"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""//p"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": """",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""blob:https://example.com:443/""","{
+ ""scheme"": ""blob:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""https://example.com:443/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""blob"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/https://example.com:443/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""blob:d3958f5c-0777-0845-9dcf-2cb28783acaf""","{
+ ""scheme"": ""blob:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""d3958f5c-0777-0845-9dcf-2cb28783acaf"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""blob"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/d3958f5c-0777-0845-9dcf-2cb28783acaf"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""blob:""","{
+ ""scheme"": ""blob:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""blob"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://0x7f.0.0.0x7g""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""0x7f.0.0.0x7g"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""0x7f.0.0.0x7g"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://0X7F.0.0.0X7G""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""0x7f.0.0.0x7g"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""0x7f.0.0.0x7g"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://[0:1:0:1:0:1:0:1]""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[0:1:0:1:0:1:0:1]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[0:1:0:1:0:1:0:1]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://[1:0:1:0:1:0:1:0]""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""[1:0:1:0:1:0:1:0]"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""[1:0:1:0:1:0:1:0]"",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://example.org/test?%GH""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""%gh"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""%25GH"",
+ ""fragment"": """"
+}"
+"""http://example.org/test?a#%GH""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""a"",
+ ""fragment"": ""%gh""
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""a"",
+ ""fragment"": ""%25GH""
+}"
+"""non-spec://example.org/test?a#b\u0000c""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""a"",
+ ""fragment"": ""b%00c""
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": ""example.org"",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""a"",
+ ""fragment"": ""b\u0000c""
+}"
+"""non-spec:/test?a#b\u0000c""","{
+ ""scheme"": ""non-spec:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""a"",
+ ""fragment"": ""b%00c""
+}","{
+ ""scheme"": ""non-spec"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/test"",
+ ""query"": ""a"",
+ ""fragment"": ""b\u0000c""
+}"
+"""a1234567890-+.:foo/bar""","{
+ ""scheme"": ""a1234567890-+.:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""foo/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: a1234567890-+.:foo/bar""
+}"
+"""non-special:cannot-be-a-base-url-\u0000\u0001\u001f\u001e~\u007f\u0080""","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""cannot-be-a-base-url-%00%01%1f%1e~%7f%c2%80"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""non-special"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/cannot-be-a-base-url-\u0000\u0001\u001f\u001e~\u007f\u0080"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""https://www.example.com/path{\u007fpath.html?query'\u007f=query#fragment<\u007ffragment""","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/path%7b%7fpath.html"",
+ ""query"": ""query%27%7f=query"",
+ ""fragment"": ""fragment%3c%7ffragment""
+}","{
+ ""scheme"": ""https"",
+ ""user"": """",
+ ""host"": ""www.example.com"",
+ ""port"": """",
+ ""path"": ""/path%7B%7Fpath.html"",
+ ""query"": ""query'%7F=query"",
+ ""fragment"": ""fragment%3C%7Ffragment""
+}"
+"""https://user:pass[\u007f@foo/bar""","{
+ ""scheme"": ""https"",
+ ""user"": ""user"",
+ ""password"": ""pass%5B%7F"",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""https"",
+ ""user"": ""user:pass%5B%7F"",
+ ""host"": ""foo"",
+ ""port"": """",
+ ""path"": ""/bar"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo:// !\""$%&'()*+,-.;<=>@[\\]^_`{|}~@host/""","{
+ ""scheme"": ""foo:"",
+ ""user"": ""%20!%22$%&'()*+,-.%3B%3C%3D%3E%40%5B%5C%5D%5E_%60%7B%7C%7D~"",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: foo:// !\""$%&'()*+,-.;<=>@[\\]^_`{|}~@host/""
+}"
+"""wss:// !\""$%&'()*+,-.;<=>@[]^_`{|}~@host/""","{
+ ""scheme"": ""wss"",
+ ""user"": ""%20!%22$%&'()*+,-.%3b%3c%3d%3e%40%5b%5d%5e_%60%7b%7c%7d~"",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": "" !\""$%&'()*+,-.;<=>@[]^_`{|}~"",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://joe: !\""$%&'()*+,-.:;<=>@[\\]^_`{|}~@host/""","{
+ ""scheme"": ""foo:"",
+ ""user"": ""joe"",
+ ""password"": ""%20!%22$%&'()*+,-.%3A%3B%3C%3D%3E%40%5B%5C%5D%5E_%60%7B%7C%7D~"",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: foo://joe: !\""$%&'()*+,-.:;<=>@[\\]^_`{|}~@host/""
+}"
+"""wss://joe: !\""$%&'()*+,-.:;<=>@[]^_`{|}~@host/""","{
+ ""scheme"": ""wss"",
+ ""user"": ""joe"",
+ ""password"": ""%20!%22$%&'()*+,-.%3A%3B%3C%3D%3E%40%5B%5D%5E_%60%7B%7C%7D~"",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": ""joe: !\""$%&'()*+,-.:;<=>@[]^_`{|}~"",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://!\""$%&'()*+,-.;=_`{}~/""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""!\""$%&'()*+,-.;=_`{}~"",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""Not Parsed. Error: Failed to parse: foo://!\""$%&'()*+,-.;=_`{}~/""
+}"
+"""foo://host/ !\""$%&'()*+,-./:;<=>@[\\]^_`{|}~""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/%20!%22$%&'()*+,-./:;%3c=%3e@[\\]^_%60%7b|%7d~"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/ !\""$%&'()*+,-./:;<=>@[\\]^_`{|}~"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""wss://host/ !\""$%&'()*+,-./:;<=>@[\\]^_`{|}~""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/%20!%22$%&'()*+,-./:;%3c=%3e@[/]^_%60%7b|%7d~"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/ !\""$%&'()*+,-./:;<=>@[\\]^_`{|}~"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""foo://host/dir/? !\""$%&'()*+,-./:;<=>?@[\\]^_`{|}~""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": ""%20!%22$%&'()*+,-./:;%3c=%3e?@[\\]^_`{|}~"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": "" !\""$%&'()*+,-./:;<=>?@[\\]^_`{|}~"",
+ ""fragment"": """"
+}"
+"""wss://host/dir/? !\""$%&'()*+,-./:;<=>?@[\\]^_`{|}~""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": ""%20!%22$%&%27()*+,-./:;%3c=%3e?@[\\]^_`{|}~"",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": "" !\""$%&'()*+,-./:;<=>?@[\\]^_`{|}~"",
+ ""fragment"": """"
+}"
+"""foo://host/dir/# !\""#$%&'()*+,-./:;<=>?@[\\]^_`{|}~""","{
+ ""scheme"": ""foo:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": """",
+ ""fragment"": ""%20!%22#$%&'()*+,-./:;%3c=%3e?@[\\]^_%60{|}~""
+}","{
+ ""scheme"": ""foo"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": """",
+ ""fragment"": "" !\""#$%&'()*+,-./:;<=>?@[\\]^_`{|}~""
+}"
+"""wss://host/dir/# !\""#$%&'()*+,-./:;<=>?@[\\]^_`{|}~""","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": """",
+ ""fragment"": ""%20!%22#$%&'()*+,-./:;%3c=%3e?@[\\]^_%60{|}~""
+}","{
+ ""scheme"": ""wss"",
+ ""user"": """",
+ ""host"": ""host"",
+ ""port"": """",
+ ""path"": ""/dir/"",
+ ""query"": """",
+ ""fragment"": "" !\""#$%&'()*+,-./:;<=>?@[\\]^_`{|}~""
+}"
+"""abc:rootless""","{
+ ""scheme"": ""abc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""rootless"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""abc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/rootless"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""abc:rootless""","{
+ ""scheme"": ""abc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""rootless"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""abc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/rootless"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""abc:rootless""","{
+ ""scheme"": ""abc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""rootless"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""abc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/rootless"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""abc:/rooted""","{
+ ""scheme"": ""abc:"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/rooted"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""abc"",
+ ""user"": """",
+ ""host"": """",
+ ""port"": """",
+ ""path"": ""/rooted"",
+ ""query"": """",
+ ""fragment"": """"
+}"
+"""http://foo.09..""","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""password"": """",
+ ""host"": ""foo.09.."",
+ ""port"": """",
+ ""path"": ""/"",
+ ""query"": """",
+ ""fragment"": """"
+}","{
+ ""scheme"": ""http"",
+ ""user"": """",
+ ""host"": ""foo.09.."",
+ ""port"": """",
+ ""path"": """",
+ ""query"": """",
+ ""fragment"": """"
+}"

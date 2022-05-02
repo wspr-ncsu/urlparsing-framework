@@ -1,0 +1,1984 @@
+URL,uri-js,php
+//@,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+//,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+//:,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"#	","Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => %09
+)
+","Array
+(
+    [fragment] => _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"#
+","Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => %0A
+)
+","Array
+(
+    [fragment] => _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => %0B
+)
+","Array
+(
+    [fragment] => _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => %0C
+)
+","Array
+(
+    [fragment] => _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"#","Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => %0D
+)
+","Array
+(
+    [fragment] => _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+//[2001:db8::7],"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::7
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8::7]
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[::ffff:129.144.52.38],"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => ::ffff:129.144.52.38
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [::ffff:129.144.52.38]
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2606:2800:220:1:248:1893:25c8:1946]/test,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2606:2800:220:1:248:1893:25c8:1946
+    [port] => 
+    [path] => /test
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2606:2800:220:1:248:1893:25c8:1946]
+    [path] => /test
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:db8::1]:80,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::1
+    [port] => 80
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8::1]
+    [port] => 80
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[fe80::a%25en1],"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => fe80::a%en1
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [fe80::a%25en1]
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:db8::7%en0],"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::7%en0
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8::7%en0]
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"/adf
+gf","Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /adf%0Agf
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /adf_gf
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"//www.g.com/error
+/bleh/bleh","Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => www.g.com
+    [port] => 
+    [path] => /error%0A/bleh/bleh
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => www.g.com
+    [path] => /error_/bleh/bleh
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+uri://www.example.org/red%09rosé#red,"Array
+(
+    [scheme] => uri
+    [user] => 
+    [password] => 
+    [host] => www.example.org
+    [port] => 
+    [path] => /red%09ros%C3%A9
+    [query] => 
+    [fragment] => red
+)
+","Array
+(
+    [scheme] => uri
+    [host] => www.example.org
+    [path] => /red%09rosé
+    [fragment] => red
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+)
+"
+//192.068.001.000,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 192.68.1.0
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => 192.068.001.000
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[1080::8:800:200C:417A]/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 1080::8:800:200c:417a
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [1080::8:800:200C:417A]
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:0db8::0001]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:0db8::0001]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:db8::1:0000:1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::1:0:1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8::1:0000:1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:db8:0:0:0:0:2:1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::2:1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8:0:0:0:0:2:1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:db8:0:1:1:1:1:1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8:0:1:1:1:1:1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8:0:1:1:1:1:1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:0:0:1:0:0:0:1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:0:0:1::1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:0:0:1:0:0:0:1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:db8:0:0:1:0:0:1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::1:0:0:1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:db8:0:0:1:0:0:1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[2001:DB8::1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 2001:db8::1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [2001:DB8::1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[0:0:0:0:0:ffff:192.0.2.1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => ::ffff:192.0.2.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [0:0:0:0:0:ffff:192.0.2.1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[1:2:3:4:5:6:192.0.2.1]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 1:2:3:4:5:6:192.0.2.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [1:2:3:4:5:6:192.0.2.1]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//[1:2:3:4:5:6:192.068.001.000]/,"Array
+(
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 1:2:3:4:5:6:192.68.1.0
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => [1:2:3:4:5:6:192.068.001.000]
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+eXAMPLE://a/./b/../b/%63/%7bfoo%7d,"Array
+(
+    [scheme] => example
+    [user] => 
+    [password] => 
+    [host] => a
+    [port] => 
+    [path] => /./b/../b/c/%7Bfoo%7D
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => eXAMPLE
+    [host] => a
+    [path] => /./b/../b/%63/%7bfoo%7d
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.org/%7euser,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /~user
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.org
+    [path] => /%7euser
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+eXAMPLE://a/./b/../b/%63/%7bfoo%7d/ros%C3%A9,"Array
+(
+    [scheme] => example
+    [user] => 
+    [password] => 
+    [host] => a
+    [port] => 
+    [path] => /./b/../b/c/%7Bfoo%7D/rosé
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => eXAMPLE
+    [host] => a
+    [path] => /./b/../b/%63/%7bfoo%7d/ros%C3%A9
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+uri://résumé.example.org,"Array
+(
+    [scheme] => uri
+    [user] => 
+    [password] => 
+    [host] => xn--rsum-bpad.example.org
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => uri
+    [host] => résumé.example.org
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+uri://xn--99zt52a.example.org/%e2%80%ae,"Array
+(
+    [scheme] => uri
+    [user] => 
+    [password] => 
+    [host] => xn--99zt52a.example.org
+    [port] => 
+    [path] => /%E2%80%AE
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => uri
+    [host] => xn--99zt52a.example.org
+    [path] => /%e2%80%ae
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://ABC.com/%7Esmith/home.html,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 
+    [path] => /~smith/home.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ABC.com
+    [path] => /%7Esmith/home.html
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://ABC.com:/%7esmith/home.html,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 
+    [path] => /~smith/home.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ABC.com
+    [path] => /%7esmith/home.html
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+HTTP://ABC.COM,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => HTTP
+    [host] => ABC.COM
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"URN:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => URN
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:FOO:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => FOO:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:a123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"urn:foo:A123,456","Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:A123,456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:foo:a123%2C456,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:a123%2C456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+URN:FOO:a123%2c456,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => URN
+    [path] => FOO:a123%2c456
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:uuid:notauuid-7dec-11d0-a765-00a0c91e6bf6,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => uuid:notauuid-7dec-11d0-a765-00a0c91e6bf6
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+URN:UUID:F81D4FAE-7DEC-11D0-A765-00A0C91E6BF6,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => URN
+    [path] => UUID:F81D4FAE-7DEC-11D0-A765-00A0C91E6BF6
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:foo:f81d4fae-7dec-11d0-a765-00a0c91e6bf6,"Array
+(
+    [scheme] => urn
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => foo:f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:chris@example.com,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => chris@example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:infobot@example.com?subject=current-issue,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => infobot@example.com
+    [query] => subject=current-issue
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:infobot@example.com?body=send%20current-issue,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => infobot@example.com
+    [query] => body=send%20current-issue
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:infobot@example.com?body=send%20current-issue%0D%0Asend%20index,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => infobot@example.com
+    [query] => body=send%20current-issue%0D%0Asend%20index
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:list@example.org?In-Reply-To=%3C3469A91.D10AF4C@example.com%3E,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => list@example.org
+    [query] => In-Reply-To=%3C3469A91.D10AF4C@example.com%3E
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:majordomo@example.com?body=subscribe%20bamboo-l,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => majordomo@example.com
+    [query] => body=subscribe%20bamboo-l
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:joe@example.com?cc=bob@example.com&body=hello,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => joe@example.com
+    [query] => cc=bob@example.com&body=hello
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:joe@example.com?cc=bob@example.com?body=hello,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => joe@example.com
+    [query] => cc=bob@example.com?body=hello
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:gorby%25kremvax@example.com,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => gorby%25kremvax@example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:unlikely%3Faddress@example.com?blat=foop,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => unlikely%3Faddress@example.com
+    [query] => blat=foop
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:Mike%26family@example.org,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => Mike%26family@example.org
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:%22not%40me%22@example.org,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => %22not%40me%22@example.org
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:%22oh%5C%5Cno%22@example.org,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => %22oh%5C%5Cno%22@example.org
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:%22%5C%5C%5C%22it's%5C%20ugly%5C%5C%5C%22%22@example.org,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => %22%5C%5C%5C%22it's%5C%20ugly%5C%5C%5C%22%22@example.org
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:user@example.org?subject=caf%C3%A9,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => user@example.org
+    [query] => subject=caf%C3%A9
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:user@example.org?subject=%3D%3Futf-8%3FQ%3Fcaf%3DC3%3DA9%3F%3D,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => user@example.org
+    [query] => subject=%3D%3Futf-8%3FQ%3Fcaf%3DC3%3DA9%3F%3D
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:user@example.org?subject=%3D%3Fiso-8859-1%3FQ%3Fcaf%3DE9%3F%3D,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => user@example.org
+    [query] => subject=%3D%3Fiso-8859-1%3FQ%3Fcaf%3DE9%3F%3D
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+mailto:user@example.org?subject=caf%C3%A9&body=caf%C3%A9,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => user@example.org
+    [query] => subject=caf%C3%A9&body=caf%C3%A9
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"mailto:addr1@an.example,addr2@an.example","Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => addr1@an.example,addr2@an.example
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"mailto:?to=addr1@an.example,addr2@an.example","Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [query] => to=addr1@an.example,addr2@an.example
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+"mailto:?to=addr1@an.example,addr2@an.example","Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [query] => to=addr1@an.example,addr2@an.example
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+mailto:addr1@an.example?to=addr2@an.example,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => addr1@an.example
+    [query] => to=addr2@an.example
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+ws://example.com/chat,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [host] => example.com
+    [path] => /chat
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws://example.com/foo?bar=baz,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [host] => example.com
+    [path] => /foo
+    [query] => bar=baz
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+ws://example.com/?bar=baz,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [host] => example.com
+    [path] => /
+    [query] => bar=baz
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+WS://ABC.COM:80/chat#one,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 80
+    [path] => 
+    [query] => 
+    [fragment] => one
+)
+","Array
+(
+    [scheme] => WS
+    [host] => ABC.COM
+    [port] => 80
+    [path] => /chat
+    [fragment] => one
+    [user] => 
+    [password] => 
+    [query] => 
+)
+"
+ws://abc.com/chat,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [host] => abc.com
+    [path] => /chat
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws://example.com:80/foo#hash,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 80
+    [path] => 
+    [query] => 
+    [fragment] => hash
+)
+","Array
+(
+    [scheme] => ws
+    [host] => example.com
+    [port] => 80
+    [path] => /foo
+    [fragment] => hash
+    [user] => 
+    [password] => 
+    [query] => 
+)
+"
+wss://example.com/chat,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => example.com
+    [path] => /chat
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss://example.com/foo?bar=baz,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => example.com
+    [path] => /foo
+    [query] => bar=baz
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+wss://example.com/?bar=baz,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => example.com
+    [path] => /
+    [query] => bar=baz
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+WSS://ABC.COM:443/chat#one,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 443
+    [path] => 
+    [query] => 
+    [fragment] => one
+)
+","Array
+(
+    [scheme] => WSS
+    [host] => ABC.COM
+    [port] => 443
+    [path] => /chat
+    [fragment] => one
+    [user] => 
+    [password] => 
+    [query] => 
+)
+"
+wss://abc.com/chat,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => abc.com
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => abc.com
+    [path] => /chat
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss://example.com:443/foo#hash,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 443
+    [path] => 
+    [query] => 
+    [fragment] => hash
+)
+","Array
+(
+    [scheme] => wss
+    [host] => example.com
+    [port] => 443
+    [path] => /foo
+    [fragment] => hash
+    [user] => 
+    [password] => 
+    [query] => 
+)
+"

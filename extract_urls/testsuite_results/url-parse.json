@@ -1,0 +1,1910 @@
+{
+  "environment": "javascript",
+  "name": "url-parse",
+  "version": "1.5.3",
+  "urls": [
+    {
+      "input": "//",
+      "expected_output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "//",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "",
+      "expected_output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "/foo?foo=bar",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/foo",
+        "query": "foo=bar",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://gist.github.com/3f272586-6dac-4e29-92d0-f674f2dde618",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "gist.github.com",
+        "port": "",
+        "path": "/3f272586-6dac-4e29-92d0-f674f2dde618",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "/unshiftio/url-parse",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "gist.github.com",
+        "port": "",
+        "path": "/unshiftio/url-parse",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://www.mozilla.org/en-US/firefox/34.0/whatsnew/?oldversion=33.1",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "www.mozilla.org",
+        "port": "",
+        "path": "/en-US/firefox/34.0/whatsnew/",
+        "query": "oldversion=33.1",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "HTTP://fOo.eXaMPle.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "HTTP://X.COM/Y/Z",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "x.com",
+        "port": "",
+        "path": "/Y/Z",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://example.com:80",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://localhost:3000/PROD/trends",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "localhost",
+        "port": "3000",
+        "path": "/PROD/trends",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "/dataApi/PROD/ws",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "localhost",
+        "port": "3000",
+        "path": "/dataApi/PROD/ws",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://example.com/foo/bar",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "/sections/?project=default",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/sections/",
+        "query": "project=default",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://x.com/path?that's#all, folks",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "x.com",
+        "port": "",
+        "path": "/path",
+        "query": "that's",
+        "fragment": "all, folks"
+      }
+    },
+
+    {
+      "input": "http://x.y.com+a/b/c",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "x.y.com+a",
+        "port": "",
+        "path": "/b/c",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com:80\\@yahoo.com/#what\\is going on",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/@yahoo.com/",
+        "query": "",
+        "fragment": "what\\is going on"
+      }
+    },
+
+    {
+      "input": "http://yolo.com\\what-is-up.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "yolo.com",
+        "port": "",
+        "path": "/what-is-up.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "////what-is-up.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "what-is-up.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "\\\\\\\\what-is-up.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "what-is-up.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https:\\/github.com/foo/bar",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "github.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https:/\\/\\/\\github.com/foo/bar",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "github.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https:/github.com/foo/bar",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "github.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https:\\github.com/foo/bar",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "github.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https:github.com/foo/bar",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "github.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo:example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo:/example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo:\\example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "\\example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo://example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo:\\\\example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "\\\\example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo:///example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo:\\\\\\example.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "\\\\\\example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo://bar.com",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "bar.com",
+        "port": "",
+        "path": "",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "\\\\example.com/foo/bar",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "bar.com",
+        "port": "",
+        "path": "/\\\\example.com/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "//example.com",
+      "expected_output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "//example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://mt0.google.com/vt/lyrs=m@114???&hl=en&src=api&x=2&y=2&z=3&s=",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "mt0.google.com",
+        "port": "",
+        "path": "/vt/lyrs=m@114",
+        "query": "??&hl=en&src=api&x=2&y=2&z=3&s=",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://sub.example.com/bar?foo=bar#hash",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "",
+        "path": "/bar",
+        "query": "foo=bar",
+        "fragment": "hash"
+      }
+    },
+
+    {
+      "input": "/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com:80/pathname",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "HTTP://gOogle.cOm:80/pathname",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo://example.com/pathname",
+      "expected_output": {
+        "scheme": "foo",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com:80/pathname",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com:80",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://google.com:443/pathname",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com:443/pathname",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "443",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://google.com:80/pathname",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "80",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file://google.com/pathname",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "ws://google.com:80/pathname",
+      "expected_output": {
+        "scheme": "ws",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "wss://google.com:443/pathname",
+      "expected_output": {
+        "scheme": "wss",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "ws://google.com:443/pathname",
+      "expected_output": {
+        "scheme": "ws",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "443",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com:8080/pathname",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "8080",
+        "path": "/pathname",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://example.com/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "ws://example.com/",
+      "expected_output": {
+        "scheme": "ws",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "wss://example.com/",
+      "expected_output": {
+        "scheme": "wss",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "mailto:test@example.com",
+      "expected_output": {
+        "scheme": "mailto",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "test@example.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E",
+      "expected_output": {
+        "scheme": "data",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "sip:alice@atlanta.com",
+      "expected_output": {
+        "scheme": "sip",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "alice@atlanta.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "HTTP://example.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "google.com/foo",
+      "expected_output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "google.com/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://google.com/foo",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:/",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file://",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:///",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:////",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "//",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file://///",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "///",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:///Users/foo/BAR/baz.pdf",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/Users/foo/BAR/baz.pdf",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:///foo/bar?baz=qux#hash",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "baz=qux",
+        "fragment": "hash"
+      }
+    },
+
+    {
+      "input": "file://c:\\foo\\bar\\",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/c:/foo/bar/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file://host/file",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "host",
+        "port": "",
+        "path": "/file",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:///baz",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/baz",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "foo/bar",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "file:///baz/",
+      "expected_output": {
+        "scheme": "file",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "/baz/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://[1080:0:0:0:8:800:200C:417A]:61616/foo/bar?q=z",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "[1080:0:0:0:8:800:200c:417a]",
+        "port": "61616",
+        "path": "/foo/bar",
+        "query": "q=z",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://user:password@[3ffe:2a00:100:7031::1]:8080/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "user",
+        "password": "password",
+        "host": "[3ffe:2a00:100:7031::1]",
+        "port": "8080",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://222.148.142.13:61616/foo/bar?q=z",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "222.148.142.13",
+        "port": "61616",
+        "path": "/foo/bar",
+        "query": "q=z",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "HTTP://USER:PASS@EXAMPLE.COM",
+      "expected_output": {
+        "scheme": "http",
+        "user": "USER",
+        "password": "PASS",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://mt0.google.com/vt/lyrs=m@114&hl=en&src=api&x=2&y=2&z=3&s=",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "mt0.google.com",
+        "port": "",
+        "path": "/vt/lyrs=m@114&hl=en&src=api&x=2&y=2&z=3&s=",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://user@www.example.com/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "user",
+        "password": "",
+        "host": "www.example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://sub.example.com:808/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "808",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://localhost",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "localhost",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://sub.example.com:808/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "808",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://sub.example.com:808/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "808",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "//foo.com/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo:bar@sub.example.com/bar?foo=bar#hash",
+      "expected_output": {
+        "scheme": "http",
+        "user": "foo",
+        "password": "bar",
+        "host": "sub.example.com",
+        "port": "",
+        "path": "/bar",
+        "query": "foo=bar",
+        "fragment": "hash"
+      }
+    },
+
+    {
+      "input": "http://localhost",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "localhost",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com/a",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "a",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "a/",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com/a",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "b/c",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/b/c",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": ".",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "./",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "./.",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com/a",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "./b",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a/b",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "..",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "../",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "../..",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com/a/b",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a/b",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "../../../../c",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/c",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo.com/a/b/c",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a/b/c",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "./../d",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a/d",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "d/e/f/./../../g",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "foo.com",
+        "port": "",
+        "path": "/a/b/d/g",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://sub.example.com/bar?foo=bar#hash",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "",
+        "path": "/bar",
+        "query": "foo=bar",
+        "fragment": "hash"
+      }
+    },
+
+    {
+      "input": "/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "sub.example.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo:bar@sub.example.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "foo",
+        "password": "bar",
+        "host": "sub.example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://[7886:3423::1233]/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "[7886:3423::1233]",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://thisanurl.com/?swag=yolo#representing",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "thisanurl.com",
+        "port": "",
+        "path": "/",
+        "query": "swag=yolo",
+        "fragment": "representing"
+      }
+    },
+
+    {
+      "input": "http://google.com/foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/foo",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "",
+      "expected_output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://google.com/?foo=bar",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/",
+        "query": "foo=bar",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://example.com",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "sip:alice@atlanta.com",
+      "expected_output": {
+        "scheme": "sip",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "alice@atlanta.com",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://example.com",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://foo:bar@example.com",
+      "expected_output": {
+        "scheme": "https",
+        "user": "foo",
+        "password": "bar",
+        "host": "example.com",
+        "port": "",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "ws://xn--n3h.com:844/foo/bar#http://",
+      "expected_output": {
+        "scheme": "ws",
+        "user": "",
+        "password": "",
+        "host": "xn--n3h.com",
+        "port": "844",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": "http://"
+      }
+    },
+
+    {
+      "input": "ws://bar:bar@[2001:2353:0:0:0:0:1428:57ab]/bar#?querystring",
+      "expected_output": {
+        "scheme": "ws",
+        "user": "bar",
+        "password": "bar",
+        "host": "[2001:2353:0:0:0:0:1428:57ab]",
+        "port": "",
+        "path": "/bar",
+        "query": "",
+        "fragment": "?querystring"
+      }
+    },
+
+    {
+      "input": "https://localhost:844/",
+      "expected_output": {
+        "scheme": "https",
+        "user": "",
+        "password": "",
+        "host": "localhost",
+        "port": "844",
+        "path": "/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://bar:foo@[2001:2353:0000:0000:0000:0000:1428:57ab]/@3rd-Eden?foo[]=bar&foo[]=foo",
+      "expected_output": {
+        "scheme": "https",
+        "user": "bar",
+        "password": "foo",
+        "host": "[2001:2353:0000:0000:0000:0000:1428:57ab]",
+        "port": "",
+        "path": "/@3rd-Eden",
+        "query": "foo[]=bar&foo[]=foo",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "https://bar:foo@[2001:2353:0:0:0:0:1428:57ab]/foo.bar/foo?email=foo@bar.travel",
+      "expected_output": {
+        "scheme": "https",
+        "user": "bar",
+        "password": "foo",
+        "host": "[2001:2353:0:0:0:0:1428:57ab]",
+        "port": "",
+        "path": "/foo.bar/foo",
+        "query": "email=foo@bar.travel",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo:foo@localhost/foo/bar?foo[]=bar&foo[]=foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "foo",
+        "password": "foo",
+        "host": "localhost",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "foo[]=bar&foo[]=foo",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://foo:foo@[2001:2353:0000:0000:0000::1428:57ab]/@3rd-Eden?foo[]=bar&foo[]=foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "foo",
+        "password": "foo",
+        "host": "[2001:2353:0000:0000:0000::1428:57ab]",
+        "port": "",
+        "path": "/@3rd-Eden",
+        "query": "foo[]=bar&foo[]=foo",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "http://[2001:2353:02de::0e13]:3340/@3rd-Eden?foo[]=bar&foo[]=foo",
+      "expected_output": {
+        "scheme": "http",
+        "user": "",
+        "password": "",
+        "host": "[2001:2353:02de::0e13]",
+        "port": "3340",
+        "path": "/@3rd-Eden",
+        "query": "foo[]=bar&foo[]=foo",
+        "fragment": ""
+      }
+    },
+
+    {
+      "input": "wss://[::2]:3340/a/b/c/d/e/f/g/j/1/d/4/#name",
+      "expected_output": {
+        "scheme": "wss",
+        "user": "",
+        "password": "",
+        "host": "[::2]",
+        "port": "3340",
+        "path": "/a/b/c/d/e/f/g/j/1/d/4/",
+        "query": "",
+        "fragment": "name"
+      }
+    },
+
+    {
+      "input": "ws://bar:foo@[2001:2353:0000:0000:0000::1428:57ab]:8080/a/b/c/d/e/f/g/j/1/d/4/#/what/about/slashes?querystring",
+      "expected_output": {
+        "scheme": "ws",
+        "user": "bar",
+        "password": "foo",
+        "host": "[2001:2353:0000:0000:0000::1428:57ab]",
+        "port": "8080",
+        "path": "/a/b/c/d/e/f/g/j/1/d/4/",
+        "query": "",
+        "fragment": "/what/about/slashes?querystring"
+      }
+    }
+  ]
+}

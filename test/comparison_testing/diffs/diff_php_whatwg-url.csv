@@ -1,0 +1,9167 @@
+URL,whatwg-url,php
+"http://example	.
+org","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example_._org
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://test:@test,"Array
+(
+    [scheme] => https
+    [user] => test
+    [password] => 
+    [host] => test
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => test
+    [user] => test
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://:@test,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => test
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => test
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:foo.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/foo.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => foo.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"	   :foo.com   
+","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:foo.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => _   :foo.com   _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+" foo.com  ","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/foo.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] =>  foo.com  
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"a:	 foo.com","Array
+(
+    [scheme] => a:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] =>  foo.com
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => a
+    [path] => _ foo.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://f:21/ b ? d # e ","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => f
+    [port] => 21
+    [path] => /%20b%20
+    [query] => %20d%20
+    [fragment] => %20e
+)
+","Array
+(
+    [scheme] => http
+    [host] => f
+    [port] => 21
+    [path] => / b 
+    [query] =>  d 
+    [fragment] =>  e 
+    [user] => 
+    [password] => 
+)
+"
+"lolscheme:x x#x x","Array
+(
+    [scheme] => lolscheme
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => x x
+    [query] => 
+    [fragment] => x%20x
+)
+","Array
+(
+    [scheme] => lolscheme
+    [path] => x x
+    [fragment] => x x
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+http://f:00000000000000/c,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => f
+    [port] => 0
+    [path] => /c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+http://f:00000000000000000000080/c,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => f
+    [port] => 
+    [path] => /c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"http://f:
+/c","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => f
+    [port] => 
+    [path] => /c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"  	","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] =>   _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+:foo.com/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:foo.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => :foo.com/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+":foo.com\","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:foo.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => :foo.com\
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+:,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+:a,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:a
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => :a
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+:/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => :/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+":\","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => :\
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+:#,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => :
+    [fragment] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+#,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [fragment] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => /
+)
+","Array
+(
+    [fragment] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"#\","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => \
+)
+","Array
+(
+    [fragment] => \
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#;?,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => ;?
+)
+","Array
+(
+    [fragment] => ;?
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+?,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [query] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+:23,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:23
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+/:23,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /:23
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"\x","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /x
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"\\x\hello","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => x
+    [port] => 
+    [path] => /hello
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \\x\hello
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+::,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/::
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ::
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+::23,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/::23
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ::23
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+foo://,"Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+http::@c:29,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/:@c:29
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => :@c:29
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://&a:foo(b]c@d:2/,"Array
+(
+    [scheme] => http
+    [user] => &a
+    [password] => foo(b%5Dc
+    [host] => d
+    [port] => 2
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => d
+    [port] => 2
+    [user] => &a
+    [path] => /
+    [password] => foo(b]c
+    [query] => 
+    [fragment] => 
+)
+"
+http://::@c@d:2,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => %3A%40c
+    [host] => d
+    [port] => 2
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => d
+    [port] => 2
+    [user] => 
+    [password] => :@c
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://foo.com/\@","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => //@
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.com
+    [path] => /\@
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http:\\foo.com\","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => \\foo.com\
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http:\\a\b:c\d@foo.com\","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => a
+    [port] => 
+    [path] => /b:c/d@foo.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => \\a\b:c\d@foo.com\
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+foo:/,"Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [path] => /
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+foo:/bar.com/,"Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /bar.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [path] => /bar.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+foo://///////,"Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ///////
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+foo://///////bar.com/,"Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ///////bar.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+foo:////://///,"Array
+(
+    [scheme] => foo
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //://///
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+//foo/bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 
+    [path] => /bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => foo
+    [path] => /bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+[61:24:74]:98,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/[61:24:74]:98
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => [61:24:74]:98
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:[61:27]/:foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/[61:27]/:foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => [61:27]/:foo
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[2001::1],"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [2001::1]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [2001::1]
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[::127.0.0.1],"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [::7f00:1]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [::127.0.0.1]
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[0:0:0:0:0:0:13.1.68.3],"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [::d01:4403]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [0:0:0:0:0:0:13.1.68.3]
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[2001::1]:80,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [2001::1]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [2001::1]
+    [port] => 80
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:/example.com/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /example.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ftp:/example.com/,"Array
+(
+    [scheme] => ftp
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ftp
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https:/example.com/,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+madeupscheme:/example.com/,"Array
+(
+    [scheme] => madeupscheme:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /example.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => madeupscheme
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws:/example.com/,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss:/example.com/,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:example.com/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/example.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ftp:example.com/,"Array
+(
+    [scheme] => ftp
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ftp
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https:example.com/,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws:example.com/,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss:example.com/,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/a/b/c,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /a/b/c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /a/b/c
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"/a/ /c","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /a/%20/c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /a/ /c
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/a%2fc,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /a%2fc
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /a%2fc
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/a/%2f/c,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /a/%2f/c
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /a/%2f/c
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+#β,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => %CE%B2
+)
+","Array
+(
+    [fragment] => β
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"file:c:\foo\bar.html","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /c:/foo/bar.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => c:\foo\bar.html
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"  File:c|////foo\bar.html","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /c:////foo/bar.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] =>   File:c|////foo\bar.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+C|/foo/bar,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|/foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"/C|\foo\bar","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /C|\foo\bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//C|/foo/bar,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => C|
+    [path] => /foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//server/file,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => server
+    [port] => 
+    [path] => /file
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => server
+    [path] => /file
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"\\server\file","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => server
+    [port] => 
+    [path] => /file
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \\server\file
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"/\server/file","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => server
+    [port] => 
+    [path] => /file
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /\server/file
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+///,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+///test,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+file://test,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => test
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => test
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://localhost,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => localhost
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://localhost/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => localhost
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://localhost/test,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => localhost
+    [path] => /test
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+test,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /tmp/mock/test
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => test
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:test,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /tmp/mock/test
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => test
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/././foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /././foo
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/./.foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /.foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /./.foo
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/.,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/.
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/./,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/./
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/bar/..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/bar/..
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/bar/../,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/bar/../
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/bar/../ton,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/ton
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/bar/../ton
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/bar/../ton/../../a,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /a
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/bar/../ton/../../a
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/../../..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/../../..
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/../../../ton,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /ton
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/../../../ton
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/%2e,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/%2e
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/%2e./%2e%2e/.%2e/%2e.bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /%2e.bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/%2e./%2e%2e/.%2e/%2e.bar
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com////../..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => ////../..
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/bar//../..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/bar//../..
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo/bar//..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo/bar/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo/bar//..
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/foo%2Â©zbar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo%2%C3%82%C2%A9zbar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo%2Â©zbar
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://example.com/foo	%91","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foo%C2%91%91
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo_%91
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://example.com/foo	bar","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /foobar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /foo_bar
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://example.com\\foo\\bar","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => //foo//bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com\\foo\\bar
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/你好你好,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /你好你好
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/‥/foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /%E2%80%A5/foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /‥/foo
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/﻿/foo,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /%EF%BB%BF/foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /﻿/foo
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://example.com/‮/foo/‭/bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /%E2%80%AE/foo/%E2%80%AD/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /‮/foo/‭/bar
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://www.google.com/foo?bar=baz# »","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.google.com
+    [port] => 
+    [path] => /foo
+    [query] => bar=baz
+    [fragment] => %20%C2%BB
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.google.com
+    [path] => /foo
+    [query] => bar=baz
+    [fragment] =>  »
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+"data:test# »","Array
+(
+    [scheme] => data
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => test
+    [query] => 
+    [fragment] => %20%C2%BB
+)
+","Array
+(
+    [scheme] => data
+    [path] => test
+    [fragment] =>  »
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+http://www.google.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.google.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.google.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://192.0x00A80001,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.0.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 192.0x00A80001
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://www/foo/%2E/html,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www
+    [port] => 
+    [path] => /foo/html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www
+    [path] => /foo/%2E/html
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http:\\www.google.com\foo","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.google.com
+    [port] => 
+    [path] => /foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => \\www.google.com\foo
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo:80/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo
+    [port] => 80
+    [path] => /
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+httpa://foo:80/,"Array
+(
+    [scheme] => httpa:
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 80
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => httpa
+    [host] => foo
+    [port] => 80
+    [path] => /
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://foo:443/,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => foo
+    [port] => 443
+    [path] => /
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ftp://foo:21/,"Array
+(
+    [scheme] => ftp
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ftp
+    [host] => foo
+    [port] => 21
+    [path] => /
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws://foo:80/,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [host] => foo
+    [port] => 80
+    [path] => /
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss://foo:443/,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => foo
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => foo
+    [port] => 443
+    [path] => /
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:/example.com/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ftp:/example.com/,"Array
+(
+    [scheme] => ftp
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ftp
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https:/example.com/,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+madeupscheme:/example.com/,"Array
+(
+    [scheme] => madeupscheme:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /example.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => madeupscheme
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws:/example.com/,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss:/example.com/,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [path] => /example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:example.com/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ftp:example.com/,"Array
+(
+    [scheme] => ftp
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ftp
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https:example.com/,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+madeupscheme:example.com/,"Array
+(
+    [scheme] => madeupscheme:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => example.com/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => madeupscheme
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ws:example.com/,"Array
+(
+    [scheme] => ws
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ws
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wss:example.com/,"Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [path] => example.com/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => @www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:/@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => /@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.example.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:a:b@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => a
+    [password] => b
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => a:b@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:/a:b@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => a
+    [password] => b
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => /a:b@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://a:b@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => a
+    [password] => b
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.example.com
+    [user] => a
+    [password] => b
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://@pple.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => pple.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => pple.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http::b@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => b
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => :b@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:/:b@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => b
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => /:b@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://:b@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => b
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.example.com
+    [user] => 
+    [password] => b
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:a:@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => a
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => a:@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http:/a:@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => a
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [path] => /a:@www.example.com
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://a:@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => a
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.example.com
+    [user] => a
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://www.@pple.com,"Array
+(
+    [scheme] => http
+    [user] => www.
+    [password] => 
+    [host] => pple.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => pple.com
+    [user] => www.
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://:@www.example.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.example.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+.,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => .
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+./test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ./test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../aaa/test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /aaa/test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../aaa/test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../../test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../../test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+中/test.txt,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /%E4%B8%AD/test.txt
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => 中/test.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://www.example2.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example2.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.example2.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//www.example2.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.example2.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => www.example2.com
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:...,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /...
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => ...
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:..,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => ..
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:a,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /a
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => a
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://ExAmPlE.CoM,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ExAmPlE.CoM
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://GOO​⁠﻿goo.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => googoo.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => GOO​⁠﻿goo.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"\u0000\u001b\u0004\u0012 http://example.com/\u001f  ","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \u0000\u001b\u0004\u0012 http://example.com/\u001f _ 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://www.foo。bar.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => www.foo.bar.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => www.foo。bar.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://x/�?�#�,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => x
+    [port] => 
+    [path] => /%EF%BF%BD
+    [query] => %EF%BF%BD
+    [fragment] => %EF%BF%BD
+)
+","Array
+(
+    [scheme] => https
+    [host] => x
+    [path] => /�
+    [query] => �
+    [fragment] => �
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+http://Ｇｏ.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => go.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => Ｇｏ.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://你好你好,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => xn--6qqa088eba
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 你好你好
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://faß.ExAmPlE/,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => xn--fa-hia.example
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => faß.ExAmPlE
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc://faß.ExAmPlE/,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => fa%C3%9F.ExAmPlE
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [host] => faß.ExAmPlE
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://%30%78%63%30%2e%30%32%35%30.01,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.0.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => %30%78%63%30%2e%30%32%35%30.01
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://%30%78%63%30%2e%30%32%35%30.01%2e,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.0.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => %30%78%63%30%2e%30%32%35%30.01%2e
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://０Ｘｃ０．０２５０．０１,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.0.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ０Ｘｃ０．０２５０．０１
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo:💩@example.com/bar,"Array
+(
+    [scheme] => http
+    [user] => foo
+    [password] => %F0%9F%92%A9
+    [host] => example.com
+    [port] => 
+    [path] => /bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [user] => foo
+    [path] => /bar
+    [password] => 💩
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+#,"Array
+(
+    [scheme] => test:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => test
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [fragment] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#x,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => x@x.com
+    [query] => 
+    [fragment] => x
+)
+","Array
+(
+    [fragment] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#x,"Array
+(
+    [scheme] => data
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ,
+    [query] => 
+    [fragment] => x
+)
+","Array
+(
+    [fragment] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#x,"Array
+(
+    [scheme] => about:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => blank
+    [query] => 
+    [fragment] => x
+)
+","Array
+(
+    [fragment] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#,"Array
+(
+    [scheme] => test:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => test
+    [query] => test
+    [fragment] => 
+)
+","Array
+(
+    [fragment] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+https://@test@test@example:800/,"Array
+(
+    [scheme] => https
+    [user] => %40test%40test
+    [password] => 
+    [host] => example
+    [port] => 800
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => example
+    [port] => 800
+    [user] => @test@test
+    [path] => /
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://@@@example,"Array
+(
+    [scheme] => https
+    [user] => %40%40
+    [password] => 
+    [host] => example
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => example
+    [user] => @@
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://`{}:`{}@h/`{}?`{},"Array
+(
+    [scheme] => http
+    [user] => %60%7B%7D
+    [password] => %60%7B%7D
+    [host] => h
+    [port] => 
+    [path] => /%60%7B%7D
+    [query] => `{}
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => h
+    [user] => `{}
+    [path] => /`{}
+    [query] => `{}
+    [password] => `{}
+    [port] => 
+    [fragment] => 
+)
+"
+http://host/?',"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => %27
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => host
+    [path] => /
+    [query] => '
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+notspecial://host/?',"Array
+(
+    [scheme] => notspecial:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => '
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => notspecial
+    [host] => host
+    [path] => /
+    [query] => '
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+/some/path,"Array
+(
+    [scheme] => http
+    [user] => user
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /some/path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /some/path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+,"Array
+(
+    [scheme] => http
+    [user] => user
+    [password] => pass
+    [host] => example.org
+    [port] => 21
+    [path] => /smth
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/some/path,"Array
+(
+    [scheme] => http
+    [user] => user
+    [password] => pass
+    [host] => example.org
+    [port] => 21
+    [path] => /some/path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /some/path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pa/i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => ho
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pa/i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => ho
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => ho
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /i
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+?i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pa/pa
+    [query] => i
+    [fragment] => 
+)
+","Array
+(
+    [query] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+?i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => ho
+    [port] => 
+    [path] => /pa
+    [query] => i
+    [fragment] => 
+)
+","Array
+(
+    [query] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+?i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pa/pa
+    [query] => i
+    [fragment] => 
+)
+","Array
+(
+    [query] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+#i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => sd
+    [query] => 
+    [fragment] => i
+)
+","Array
+(
+    [fragment] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => sd/sd
+    [query] => 
+    [fragment] => i
+)
+","Array
+(
+    [fragment] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pa/pa
+    [query] => 
+    [fragment] => i
+)
+","Array
+(
+    [fragment] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => ho
+    [port] => 
+    [path] => /pa
+    [query] => 
+    [fragment] => i
+)
+","Array
+(
+    [fragment] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#i,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pa/pa
+    [query] => 
+    [fragment] => i
+)
+","Array
+(
+    [fragment] => i
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+about:/../,"Array
+(
+    [scheme] => about:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => about
+    [path] => /../
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+data:/../,"Array
+(
+    [scheme] => data
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => data
+    [path] => /../
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+javascript:/../,"Array
+(
+    [scheme] => javascript
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => javascript
+    [path] => /../
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+mailto:/../,"Array
+(
+    [scheme] => mailto
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => mailto
+    [path] => /../
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc://ñ.test/,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1.test
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [host] => ñ.test
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc://%/,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [host] => %
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+x,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1
+    [port] => 
+    [path] => /x
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"sc:\../","Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => \../
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [path] => \../
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc::a@example.net,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => :a@example.net
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [path] => :a@example.net
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wow:%NBD,"Array
+(
+    [scheme] => wow:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => %NBD
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wow
+    [path] => %NBD
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wow:%1G,"Array
+(
+    [scheme] => wow:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => %1G
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wow
+    [path] => %1G
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+wow:￿,"Array
+(
+    [scheme] => wow:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => %EF%BF%BF
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wow
+    [path] => ￿
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://example.com/\ud800𐟾\udfff﷐﷏﷯ﷰ￾￿?\ud800𐟾\udfff﷐﷏﷯ﷰ￾￿","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.com
+    [port] => 
+    [path] => /%EF%BF%BD%F0%90%9F%BE%EF%BF%BD%EF%B7%90%EF%B7%8F%EF%B7%AF%EF%B7%B0%EF%BF%BE%EF%BF%BF
+    [query] => %EF%BF%BD%F0%90%9F%BE%EF%BF%BD%EF%B7%90%EF%B7%8F%EF%B7%AF%EF%B7%B0%EF%BF%BE%EF%BF%BF
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [path] => /\ud800𐟾\udfff﷐﷏﷯ﷰ￾￿
+    [query] => \ud800𐟾\udfff﷐﷏﷯ﷰ￾￿
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"foo://ho	st/","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => ho_st
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo://ho
+st/","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => ho_st
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo://host/","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => ho_st
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://ho	st/","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ho_st
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://ho
+st/","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ho_st
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://host/","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => ho_st
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"sc://\u0001\u0002\u0003\u0004\u0005\u0006\u0007\u000b\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f!""$%&'()*+,-.;=_`{}~/","Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %01%02%03%04%05%06%07%08%0B%0C%0E%0F%10%11%12%13%14%15%16%17%18%19%1A%1B%1C%1D%1E%1F%7F!""$%&'()*+,-.;=_`{}~
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [host] => \u0001\u0002\u0003\u0004\u0005\u0006\u0007_\u000b_\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f_!""$%&'()*+,-.;=_`{}~
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ftp://%e2%98%83,"Array
+(
+    [scheme] => ftp
+    [user] => 
+    [password] => 
+    [host] => xn--n3h
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ftp
+    [host] => %e2%98%83
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://%e2%98%83,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => xn--n3h
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => %e2%98%83
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"h	t
+tp://h	o
+st:9	0
+00/p	a
+th?q	u
+ery#f	r
+ag","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 9000
+    [path] => /path
+    [query] => query
+    [fragment] => frag
+)
+","Array
+(
+    [path] => h_t_t_p://h_o_s_t:9_0_0_0/p_a_t_h
+    [query] => q_u_e_ry
+    [fragment] => f_r_a_g
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+)
+"
+?a=b&c=d,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => a=b&c=d
+    [fragment] => 
+)
+","Array
+(
+    [query] => a=b&c=d
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+??a=b&c=d,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => ?a=b&c=d
+    [fragment] => 
+)
+","Array
+(
+    [query] => ?a=b&c=d
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+http,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => http
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc:,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo.bar/baz?qux#foobar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.bar
+    [port] => 
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo%08bar
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.bar
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo_bar
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+"http://foo.bar/baz?qux#foo""bar","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.bar
+    [port] => 
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo%22bar
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.bar
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo""bar
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+http://foo.bar/baz?qux#foo<bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.bar
+    [port] => 
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo%3Cbar
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.bar
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo<bar
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+http://foo.bar/baz?qux#foo>bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.bar
+    [port] => 
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo%3Ebar
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.bar
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo>bar
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+http://foo.bar/baz?qux#foo`bar,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.bar
+    [port] => 
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo%60bar
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.bar
+    [path] => /baz
+    [query] => qux
+    [fragment] => foo`bar
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+http://1.2.3.4./,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 1.2.3.4
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 1.2.3.4.
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://192.168.257,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.1.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 192.168.257
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://192.168.257.,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.1.1
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 192.168.257.
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://192.168.257.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 192.168.257.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 192.168.257.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://256,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 0.0.1.0
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 256
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://256.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 256.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 256.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://999999999,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 59.154.201.255
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 999999999
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://999999999.,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 59.154.201.255
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 999999999.
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://999999999.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 999999999.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 999999999.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://10000000000.com,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 10000000000.com
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 10000000000.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://4294967295,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 255.255.255.255
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 4294967295
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://0xffffffff,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 255.255.255.255
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 0xffffffff
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://0x.0x.0,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => 0.0.0.0
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => 0x.0x.0
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+asdf://%43%7C/,"Array
+(
+    [scheme] => asdf:
+    [user] => 
+    [password] => 
+    [host] => %43%7C
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => asdf
+    [host] => %43%7C
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+pix/submit.gif,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/Users/Domenic/Dropbox/GitHub/tmpvar/jsdom/test/level2/html/files/pix/submit.gif
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => pix/submit.gif
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => h
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => h
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//d:,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /d:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => d
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//d:/..,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /d:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => d
+    [path] => /..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => test
+    [fragment] => 
+)
+","Array
+(
+    [path] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => test
+    [fragment] => 
+)
+","Array
+(
+    [path] => file
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+?x,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => x
+    [fragment] => 
+)
+","Array
+(
+    [query] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+file:?x,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => x
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [query] => x
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+#x,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => test
+    [fragment] => x
+)
+","Array
+(
+    [fragment] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+file:#x,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => test
+    [fragment] => x
+)
+","Array
+(
+    [scheme] => file
+    [fragment] => x
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"file:\\//","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => \\//
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"file:\\\\","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => \\\\
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"file:\\\\?fox","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => fox
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => \\\\
+    [query] => fox
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"file:\\\\#guppy","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => guppy
+)
+","Array
+(
+    [scheme] => file
+    [path] => \\\\
+    [fragment] => guppy
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+"file:\\localhost//","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => \\localhost//
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"file://\/localhost//cat","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //localhost//cat
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => \
+    [path] => /localhost//cat
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://localhost//a//../..//,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ///
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => localhost
+    [path] => //a//../..//
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/////mouse,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ///mouse
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+"\//pig","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /pig
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \//pig
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"\/localhost//pig","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //pig
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => \/localhost//pig
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//localhost//pig,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //pig
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => localhost
+    [path] => //pig
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/..//localhost//pig,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => lion
+    [port] => 
+    [path] => //localhost//pig
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /..//localhost//pig
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+/rooibos,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => tea
+    [port] => 
+    [path] => /rooibos
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /rooibos
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/?chai,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => tea
+    [port] => 
+    [path] => /
+    [query] => chai
+    [fragment] => 
+)
+","Array
+(
+    [path] => /
+    [query] => chai
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+C|,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+C|,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+C|#,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|
+    [fragment] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+C|?,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|
+    [query] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+C|/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"C|
+/","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|_/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"C|\","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|\
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+C,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /dir/C
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+C|a,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /dir/C|a
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|a
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/c:/foo/bar,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /c:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /c:/foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/c|/foo/bar,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /c:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /c|/foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"file:\c:\foo\bar","Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /c:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => \c:\foo\bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/c:/foo/bar,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /c:/foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /c:/foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+C|/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => C|/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /C:/
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => C:/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:/C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /C:/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => C
+    [path] => /
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => C
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+///C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+file:///C:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => C:/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:/C|/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /C|/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://C|/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /C:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => C|
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => file
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:?q=v,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => q=v
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [query] => q=v
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+file:#frag,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => frag
+)
+","Array
+(
+    [scheme] => file
+    [fragment] => frag
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+file:///Y:,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /Y:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => Y:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///Y:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /Y:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => Y:/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///./Y,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /Y
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /./Y
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///./Y:,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /Y:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /./Y:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///y:,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /y:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => y:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///y:/,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /y:/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => y:/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///./y,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /y
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /./y
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:///./y:,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /y:
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /./y:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://localhost//a//../..//foo,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ///foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => localhost
+    [path] => //a//../..//foo
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://localhost////foo,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ////foo
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => localhost
+    [path] => ////foo
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+//one/two,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => one
+    [port] => 
+    [path] => /two
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => one
+    [path] => /two
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+///one/two,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /one/two
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+////one/two,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //one/two
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+file:///.//,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /.//
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:.//p,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //p
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => .//p
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file:/.//p,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //p
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [path] => /.//p
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[1:0::],"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [1::]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [1:0::]
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc://ñ,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [host] => ñ
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sc://ñ?x,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1
+    [port] => 
+    [path] => 
+    [query] => x
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => sc
+    [host] => ñ
+    [query] => x
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+sc://ñ#x,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => x
+)
+","Array
+(
+    [scheme] => sc
+    [host] => ñ
+    [fragment] => x
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+#x,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => x
+)
+","Array
+(
+    [fragment] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+?x,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => %C3%B1
+    [port] => 
+    [path] => 
+    [query] => x
+    [fragment] => 
+)
+","Array
+(
+    [query] => x
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [fragment] => 
+)
+"
+sc://?,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+sc://#,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+///,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+////,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+////x/,"Array
+(
+    [scheme] => sc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //x/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+tftp://foobar.com/someconfig;mode=netascii,"Array
+(
+    [scheme] => tftp:
+    [user] => 
+    [password] => 
+    [host] => foobar.com
+    [port] => 
+    [path] => /someconfig;mode=netascii
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => tftp
+    [host] => foobar.com
+    [path] => /someconfig;mode=netascii
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+telnet://user:pass@foobar.com:23/,"Array
+(
+    [scheme] => telnet:
+    [user] => user
+    [password] => pass
+    [host] => foobar.com
+    [port] => 23
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => telnet
+    [host] => foobar.com
+    [port] => 23
+    [user] => user
+    [path] => /
+    [password] => pass
+    [query] => 
+    [fragment] => 
+)
+"
+ut2004://10.10.10.10:7777/Index.ut2,"Array
+(
+    [scheme] => ut2004:
+    [user] => 
+    [password] => 
+    [host] => 10.10.10.10
+    [port] => 7777
+    [path] => /Index.ut2
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ut2004
+    [host] => 10.10.10.10
+    [port] => 7777
+    [path] => /Index.ut2
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+redis://foo:bar@somehost:6379/0?baz=bam&qux=baz,"Array
+(
+    [scheme] => redis:
+    [user] => foo
+    [password] => bar
+    [host] => somehost
+    [port] => 6379
+    [path] => /0
+    [query] => baz=bam&qux=baz
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => redis
+    [host] => somehost
+    [port] => 6379
+    [user] => foo
+    [path] => /0
+    [query] => baz=bam&qux=baz
+    [password] => bar
+    [fragment] => 
+)
+"
+rsync://foo@host:911/sup,"Array
+(
+    [scheme] => rsync:
+    [user] => foo
+    [password] => 
+    [host] => host
+    [port] => 911
+    [path] => /sup
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => rsync
+    [host] => host
+    [port] => 911
+    [user] => foo
+    [path] => /sup
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+git://github.com/foo/bar.git,"Array
+(
+    [scheme] => git:
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar.git
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => git
+    [host] => github.com
+    [path] => /foo/bar.git
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+irc://myserver.com:6999/channel?passwd,"Array
+(
+    [scheme] => irc:
+    [user] => 
+    [password] => 
+    [host] => myserver.com
+    [port] => 6999
+    [path] => /channel
+    [query] => passwd
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => irc
+    [host] => myserver.com
+    [port] => 6999
+    [path] => /channel
+    [query] => passwd
+    [user] => 
+    [password] => 
+    [fragment] => 
+)
+"
+dns://fw.example.org:9999/foo.bar.org?type=TXT,"Array
+(
+    [scheme] => dns:
+    [user] => 
+    [password] => 
+    [host] => fw.example.org
+    [port] => 9999
+    [path] => /foo.bar.org
+    [query] => type=TXT
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => dns
+    [host] => fw.example.org
+    [port] => 9999
+    [path] => /foo.bar.org
+    [query] => type=TXT
+    [user] => 
+    [password] => 
+    [fragment] => 
+)
+"
+"ldap://localhost:389/ou=People,o=JNDITutorial","Array
+(
+    [scheme] => ldap:
+    [user] => 
+    [password] => 
+    [host] => localhost
+    [port] => 389
+    [path] => /ou=People,o=JNDITutorial
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => ldap
+    [host] => localhost
+    [port] => 389
+    [path] => /ou=People,o=JNDITutorial
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+git+https://github.com/foo/bar,"Array
+(
+    [scheme] => git+https:
+    [user] => 
+    [password] => 
+    [host] => github.com
+    [port] => 
+    [path] => /foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => git+https
+    [host] => github.com
+    [path] => /foo/bar
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:ietf:rfc:2648,"Array
+(
+    [scheme] => urn:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => ietf:rfc:2648
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => urn
+    [path] => ietf:rfc:2648
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"tag:joe@example.org,2001:foo/bar","Array
+(
+    [scheme] => tag:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => joe@example.org,2001:foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => tag
+    [path] => joe@example.org,2001:foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-spec:/.//,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /.//
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-spec:/..//,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /..//
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-spec:/a/..//,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /a/..//
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-spec:/.//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /.//path
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-spec:/..//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /..//path
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-spec:/a/..//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /a/..//path
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/.//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /.//path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+/..//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => /..//path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+..//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ..//path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+a/..//path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => a/..//path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //p
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => //path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+../path,"Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /path
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => ../path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-special://[1:2:0:0:5:0:0:0]/,"Array
+(
+    [scheme] => non-special
+    [user] => 
+    [password] => 
+    [host] => [1:2:0:0:5::]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-special
+    [host] => [1:2:0:0:5:0:0:0]
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+non-special://[1:2:0:0:0:0:0:3]/,"Array
+(
+    [scheme] => non-special
+    [user] => 
+    [password] => 
+    [host] => [1:2::3]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-special
+    [host] => [1:2:0:0:0:0:0:3]
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+blob:https://example.com:443/,"Array
+(
+    [scheme] => blob:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => https://example.com:443/
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => blob
+    [path] => https://example.com:443/
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+blob:d3958f5c-0777-0845-9dcf-2cb28783acaf,"Array
+(
+    [scheme] => blob:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => d3958f5c-0777-0845-9dcf-2cb28783acaf
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => blob
+    [path] => d3958f5c-0777-0845-9dcf-2cb28783acaf
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+blob:,"Array
+(
+    [scheme] => blob:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => blob
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://0x7f.0.0.0x7g,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 0x7f.0.0.0x7g
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 0x7f.0.0.0x7g
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://0X7F.0.0.0X7G,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => 0x7f.0.0.0x7g
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => 0X7F.0.0.0X7G
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[0:1:0:1:0:1:0:1],"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [0:1:0:1:0:1:0:1]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [0:1:0:1:0:1:0:1]
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://[1:0:1:0:1:0:1:0],"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => [1:0:1:0:1:0:1:0]
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => [1:0:1:0:1:0:1:0]
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://example.org/test?""","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /test
+    [query] => %22
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.org
+    [path] => /test
+    [query] => ""
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+http://example.org/test?<,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /test
+    [query] => %3C
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.org
+    [path] => /test
+    [query] => <
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+http://example.org/test?>,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /test
+    [query] => %3E
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.org
+    [path] => /test
+    [query] => >
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+http://example.org/test?⌣,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /test
+    [query] => %E2%8C%A3
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.org
+    [path] => /test
+    [query] => ⌣
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+test-a-colon-slash.html,"Array
+(
+    [scheme] => a:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test-a-colon-slash.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => test-a-colon-slash.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+test-a-colon-slash-slash.html,"Array
+(
+    [scheme] => a:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test-a-colon-slash-slash.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => test-a-colon-slash-slash.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+test-a-colon-slash-b.html,"Array
+(
+    [scheme] => a:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test-a-colon-slash-b.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => test-a-colon-slash-b.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+test-a-colon-slash-slash-b.html,"Array
+(
+    [scheme] => a:
+    [user] => 
+    [password] => 
+    [host] => b
+    [port] => 
+    [path] => /test-a-colon-slash-slash-b.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => test-a-colon-slash-slash-b.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://example.org/test?a#b\u0000c","Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /test
+    [query] => a
+    [fragment] => b%00c
+)
+","Array
+(
+    [scheme] => http
+    [host] => example.org
+    [path] => /test
+    [query] => a
+    [fragment] => b\u0000c
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+"non-spec://example.org/test?a#b\u0000c","Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /test
+    [query] => a
+    [fragment] => b%00c
+)
+","Array
+(
+    [scheme] => non-spec
+    [host] => example.org
+    [path] => /test
+    [query] => a
+    [fragment] => b\u0000c
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+"non-spec:/test?a#b\u0000c","Array
+(
+    [scheme] => non-spec:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /test
+    [query] => a
+    [fragment] => b%00c
+)
+","Array
+(
+    [scheme] => non-spec
+    [path] => /test
+    [query] => a
+    [fragment] => b\u0000c
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+)
+"
+10.0.0.7:8080/foo.html,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /some/dir/10.0.0.7:8080/foo.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [host] => 10.0.0.7
+    [port] => 8080
+    [path] => /foo.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [query] => 
+    [fragment] => 
+)
+"
+a!@$*=/foo.html,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /some/dir/a!@$*=/foo.html
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [path] => a!@$*=/foo.html
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+a1234567890-+.:foo/bar,"Array
+(
+    [scheme] => a1234567890-+.:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => foo/bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => a1234567890-+.
+    [path] => foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://a­b/p,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => ab
+    [port] => 
+    [path] => /p
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => a­b
+    [path] => /p
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+file://a%C2%ADb/p,"Array
+(
+    [scheme] => file
+    [user] => 
+    [password] => 
+    [host] => ab
+    [port] => 
+    [path] => /p
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => file
+    [host] => a%C2%ADb
+    [path] => /p
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+#link,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => example.org
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => link
+)
+","Array
+(
+    [fragment] => link
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"non-special:cannot-be-a-base-url-\u0000\u0001\u001f\u001e~","Array
+(
+    [scheme] => non-special
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => cannot-be-a-base-url-%00%01%1F%1E~%7F%C2%80
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => non-special
+    [path] => cannot-be-a-base-url-\u0000\u0001\u001f\u001e~_
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://www.example.com/path{path.html?query'=query#fragment<fragment,"Array
+(
+    [scheme] => https
+    [user] => 
+    [password] => 
+    [host] => www.example.com
+    [port] => 
+    [path] => /path%7B%7Fpath.html
+    [query] => query%27%7F=query
+    [fragment] => fragment%3C%7Ffragment
+)
+","Array
+(
+    [scheme] => https
+    [host] => www.example.com
+    [path] => /path{_path.html
+    [query] => query'_=query
+    [fragment] => fragment<_fragment
+    [user] => 
+    [password] => 
+    [port] => 
+)
+"
+https://user:pass[@foo/bar,"Array
+(
+    [scheme] => https
+    [user] => user
+    [password] => pass%5B%7F
+    [host] => foo
+    [port] => 
+    [path] => /bar
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => https
+    [host] => foo
+    [user] => user
+    [path] => /bar
+    [password] => pass[_
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo:// !""$%&'()*+,-.;<=>@[\]^_`{|}~@host/","Array
+(
+    [scheme] => foo:
+    [user] => %20!%22$%&'()*+,-.%3B%3C%3D%3E%40%5B%5C%5D%5E_%60%7B%7C%7D~
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => host
+    [user] =>  !""$%&'()*+,-.;<=>@[\]^_`{|}~
+    [path] => /
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"wss:// !""$%&'()*+,-.;<=>@[]^_`{|}~@host/","Array
+(
+    [scheme] => wss
+    [user] => %20!%22$%&'()*+,-.%3B%3C%3D%3E%40%5B%5D%5E_%60%7B%7C%7D~
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => host
+    [user] =>  !""$%&'()*+,-.;<=>@[]^_`{|}~
+    [path] => /
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo://joe: !""$%&'()*+,-.:;<=>@[\]^_`{|}~@host/","Array
+(
+    [scheme] => foo:
+    [user] => joe
+    [password] => %20!%22$%&'()*+,-.%3A%3B%3C%3D%3E%40%5B%5C%5D%5E_%60%7B%7C%7D~
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => host
+    [user] => joe
+    [path] => /
+    [password] =>  !""$%&'()*+,-.:;<=>@[\]^_`{|}~
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"wss://joe: !""$%&'()*+,-.:;<=>@[]^_`{|}~@host/","Array
+(
+    [scheme] => wss
+    [user] => joe
+    [password] => %20!%22$%&'()*+,-.%3A%3B%3C%3D%3E%40%5B%5D%5E_%60%7B%7C%7D~
+    [host] => host
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => host
+    [user] => joe
+    [path] => /
+    [password] =>  !""$%&'()*+,-.:;<=>@[]^_`{|}~
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo://!""$%&'()*+,-.;=_`{}~/","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => !""$%&'()*+,-.;=_`{}~
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => !""$%&'()*+,-.;=_`{}~
+    [path] => /
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo://host/ !""$%&'()*+,-./:;<=>@[\]^_`{|}~","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /%20!%22$%&'()*+,-./:;%3C=%3E@[\]^_%60%7B|%7D~
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => host
+    [path] => / !""$%&'()*+,-./:;<=>@[\]^_`{|}~
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"wss://host/ !""$%&'()*+,-./:;<=>@[\]^_`{|}~","Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /%20!%22$%&'()*+,-./:;%3C=%3E@[/]^_%60%7B|%7D~
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => host
+    [path] => / !""$%&'()*+,-./:;<=>@[\]^_`{|}~
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"foo://host/dir/? !""$%&'()*+,-./:;<=>?@[\]^_`{|}~","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /dir/
+    [query] => %20!%22$%&'()*+,-./:;%3C=%3E?@[\]^_`{|}~
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => foo
+    [host] => host
+    [path] => /dir/
+    [query] =>  !""$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"wss://host/dir/? !""$%&'()*+,-./:;<=>?@[\]^_`{|}~","Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /dir/
+    [query] => %20!%22$%&%27()*+,-./:;%3C=%3E?@[\]^_`{|}~
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => wss
+    [host] => host
+    [path] => /dir/
+    [query] =>  !""$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    [user] => 
+    [password] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"foo://host/dir/# !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~","Array
+(
+    [scheme] => foo:
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /dir/
+    [query] => 
+    [fragment] => %20!%22#$%&'()*+,-./:;%3C=%3E?@[\]^_%60{|}~
+)
+","Array
+(
+    [scheme] => foo
+    [host] => host
+    [path] => /dir/
+    [fragment] =>  !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+)
+"
+"wss://host/dir/# !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~","Array
+(
+    [scheme] => wss
+    [user] => 
+    [password] => 
+    [host] => host
+    [port] => 
+    [path] => /dir/
+    [query] => 
+    [fragment] => %20!%22#$%&'()*+,-./:;%3C=%3E?@[\]^_%60{|}~
+)
+","Array
+(
+    [scheme] => wss
+    [host] => host
+    [path] => /dir/
+    [fragment] =>  !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+)
+"
+abc:rootless,"Array
+(
+    [scheme] => abc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => rootless
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => abc
+    [path] => rootless
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+abc:rootless,"Array
+(
+    [scheme] => abc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => rootless
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => abc
+    [path] => rootless
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+abc:rootless,"Array
+(
+    [scheme] => abc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => rootless
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => abc
+    [path] => rootless
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+abc:/rooted,"Array
+(
+    [scheme] => abc:
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [path] => /rooted
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => abc
+    [path] => /rooted
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo.09..,"Array
+(
+    [scheme] => http
+    [user] => 
+    [password] => 
+    [host] => foo.09..
+    [port] => 
+    [path] => /
+    [query] => 
+    [fragment] => 
+)
+","Array
+(
+    [scheme] => http
+    [host] => foo.09..
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"

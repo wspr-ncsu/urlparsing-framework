@@ -1,0 +1,1954 @@
+{
+    "urls": [
+        {
+            "input": "http://google.com/mail",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/mail/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "google.com/mail",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://www.google.com",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "www.google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://mail.google.com",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "mail.google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:8000/mail/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 8000,
+                "path": "/mail/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:8000",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 8000,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "https://google.com",
+            "expected_output": {
+                "scheme": "https",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "https://google.com:8000",
+            "expected_output": {
+                "scheme": "https",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 8000,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user:password@127.0.0.1:1234",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user",
+                "password": "password",
+                "host": "127.0.0.1",
+                "port": 1234,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/foo=http://bar:42/baz",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/foo=http://bar:42/baz",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com?foo=http://bar:42/baz",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "foo=http://bar:42/baz",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com#foo=http://bar:42/baz",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": "foo=http://bar:42/baz"
+            }
+        },
+        {
+            "input": "173.194.35.7",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://173.194.35.7",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://173.194.35.7/test",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": "",
+                "path": "/test",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://173.194.35.7:80",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": 80,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://173.194.35.7:80/test",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": 80,
+                "path": "/test",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "[2a00:1450:4001:c01::67]",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "[2a00:1450:4001:c01::67]",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[2a00:1450:4001:c01::67]",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[2a00:1450:4001:c01::67]",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[2a00:1450:4001:c01::67]/test",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[2a00:1450:4001:c01::67]",
+                "port": "",
+                "path": "/test",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[2a00:1450:4001:c01::67]:80",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[2a00:1450:4001:c01::67]",
+                "port": 80,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[2a00:1450:4001:c01::67]:80/test",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[2a00:1450:4001:c01::67]",
+                "port": 80,
+                "path": "/test",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[fedc:ba98:7654:3210:fedc:ba98:7654:3210]:8000/index.html",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[fedc:ba98:7654:3210:fedc:ba98:7654:3210]",
+                "port": 8000,
+                "path": "/index.html",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[1080:0:0:0:8:800:200c:417a]/index.html",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[1080:0:0:0:8:800:200c:417a]",
+                "port": "",
+                "path": "/index.html",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[3ffe:2a00:100:7031::1]",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[3ffe:2a00:100:7031::1]",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[1080::8:800:200c:417a]/foo",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[1080::8:800:200c:417a]",
+                "port": "",
+                "path": "/foo",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[::192.9.5.5]/ipng",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[::192.9.5.5]",
+                "port": "",
+                "path": "/ipng",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[::ffff:129.144.52.38]:42/index.html",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[::ffff:129.144.52.38]",
+                "port": 42,
+                "path": "/index.html",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://[2010:836b:4179::836b:4179]",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[2010:836b:4179::836b:4179]",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://GOOGLE.COM/mail/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "GOogle.COM/mail",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://GoOgLe.CoM:8000/mail/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 8000,
+                "path": "/mail/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://user:password@EXAMPLE.COM:1234",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user",
+                "password": "password",
+                "host": "example.com",
+                "port": 1234,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "173.194.35.7",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://173.194.35.7",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "173.194.35.7",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://[2a00:1450:4001:c01::67]:80/test",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[2a00:1450:4001:c01::67]",
+                "port": 80,
+                "path": "/test",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://[FEDC:BA98:7654:3210:FEDC:BA98:7654:3210]:8000/index.html",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "[fedc:ba98:7654:3210:fedc:ba98:7654:3210]",
+                "port": 8000,
+                "path": "/index.html",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTPS://[1080:0:0:0:8:800:200c:417A]/index.html",
+            "expected_output": {
+                "scheme": "https",
+                "user": "",
+                "password": "",
+                "host": "[1080:0:0:0:8:800:200c:417a]",
+                "port": "",
+                "path": "/index.html",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "abOut://eXamPlE.com?info=1",
+            "expected_output": {
+                "scheme": "about",
+                "user": "",
+                "password": "",
+                "host": "eXamPlE.com",
+                "port": "",
+                "path": "",
+                "query": "info=1",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http+UNIX://%2fvar%2frun%2fSOCKET/path",
+            "expected_output": {
+                "scheme": "http+unix",
+                "user": "",
+                "password": "",
+                "host": "%2fvar%2frun%2fSOCKET",
+                "port": "",
+                "path": "/path",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://GOOGLE.COM/MAIL/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/MAIL/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user@domain.com:password@example.com/~tilde@?@",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%40domain.com",
+                "password": "password",
+                "host": "example.com",
+                "port": "",
+                "path": "/~tilde@",
+                "query": "@",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTP://JeremyCline:Hunter2@Example.com:8080/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "JeremyCline",
+                "password": "Hunter2",
+                "host": "example.com",
+                "port": 8080,
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "HTTPS://Example.Com/?Key=Value",
+            "expected_output": {
+                "scheme": "https",
+                "user": "",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/",
+                "query": "Key=Value",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "Https://Example.Com/#Fragment",
+            "expected_output": {
+                "scheme": "https",
+                "user": "",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": "Fragment"
+            }
+        },
+        {
+            "input": "[::1%25]",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "[::1%25]",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "[::Ff%etH0%Ff]/%ab%Af",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "[::ff%etH0%FF]",
+                "port": "",
+                "path": "/%AB%AF",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user:pass@[AaAa::Ff%25etH0%Ff]/%ab%Af",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user",
+                "password": "pass",
+                "host": "[aaaa::ff%etH0%FF]",
+                "port": "",
+                "path": "/%AB%AF",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/p[]?parameter[]=\"hello\"#fragment#",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/p%5B%5D",
+                "query": "parameter%5B%5D=%22hello%22",
+                "fragment": "fragment%23"
+            }
+        },
+        {
+            "input": "http://google.com/p%5B%5d?parameter%5b%5D=%22hello%22#fragment%23",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/p%5B%5D",
+                "query": "parameter%5B%5D=%22hello%22",
+                "fragment": "fragment%23"
+            }
+        },
+        {
+            "input": "http://user\\u0000@example.com/path\\u0000?query\\u0000#fragment\\u0000",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%00",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%00",
+                "query": "query%00",
+                "fragment": "fragment%00"
+            }
+        },
+        {
+            "input": "http://user\\u0001@example.com/path\\u0001?query\\u0001#fragment\\u0001",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%01",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%01",
+                "query": "query%01",
+                "fragment": "fragment%01"
+            }
+        },
+        {
+            "input": "http://user\\u0002@example.com/path\\u0002?query\\u0002#fragment\\u0002",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%02",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%02",
+                "query": "query%02",
+                "fragment": "fragment%02"
+            }
+        },
+        {
+            "input": "http://user\\u0003@example.com/path\\u0003?query\\u0003#fragment\\u0003",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%03",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%03",
+                "query": "query%03",
+                "fragment": "fragment%03"
+            }
+        },
+        {
+            "input": "http://user\\u0004@example.com/path\\u0004?query\\u0004#fragment\\u0004",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%04",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%04",
+                "query": "query%04",
+                "fragment": "fragment%04"
+            }
+        },
+        {
+            "input": "http://user\\u0005@example.com/path\\u0005?query\\u0005#fragment\\u0005",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%05",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%05",
+                "query": "query%05",
+                "fragment": "fragment%05"
+            }
+        },
+        {
+            "input": "http://user\\u0006@example.com/path\\u0006?query\\u0006#fragment\\u0006",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%06",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%06",
+                "query": "query%06",
+                "fragment": "fragment%06"
+            }
+        },
+        {
+            "input": "http://user\\u0007@example.com/path\\u0007?query\\u0007#fragment\\u0007",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%07",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%07",
+                "query": "query%07",
+                "fragment": "fragment%07"
+            }
+        },
+        {
+            "input": "http://user\b@example.com/path\b?query\b#fragment\b",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%08",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%08",
+                "query": "query%08",
+                "fragment": "fragment%08"
+            }
+        },
+        {
+            "input": "http://user\t@example.com/path\t?query\t#fragment\t",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%09",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%09",
+                "query": "query%09",
+                "fragment": "fragment%09"
+            }
+        },
+        {
+            "input": "http://user\n@example.com/path\n?query\n#fragment\n",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%0A",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%0A",
+                "query": "query%0A",
+                "fragment": "fragment%0A"
+            }
+        },
+        {
+            "input": "http://user\\u000b@example.com/path\\u000b?query\\u000b#fragment\\u000b",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%0B",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%0B",
+                "query": "query%0B",
+                "fragment": "fragment%0B"
+            }
+        },
+        {
+            "input": "http://user\f@example.com/path\f?query\f#fragment\f",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%0C",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%0C",
+                "query": "query%0C",
+                "fragment": "fragment%0C"
+            }
+        },
+        {
+            "input": "http://user\r@example.com/path\r?query\r#fragment\r",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%0D",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%0D",
+                "query": "query%0D",
+                "fragment": "fragment%0D"
+            }
+        },
+        {
+            "input": "http://user\\u000e@example.com/path\\u000e?query\\u000e#fragment\\u000e",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%0E",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%0E",
+                "query": "query%0E",
+                "fragment": "fragment%0E"
+            }
+        },
+        {
+            "input": "http://user\\u000f@example.com/path\\u000f?query\\u000f#fragment\\u000f",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%0F",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%0F",
+                "query": "query%0F",
+                "fragment": "fragment%0F"
+            }
+        },
+        {
+            "input": "http://user\\u0010@example.com/path\\u0010?query\\u0010#fragment\\u0010",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%10",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%10",
+                "query": "query%10",
+                "fragment": "fragment%10"
+            }
+        },
+        {
+            "input": "http://user\\u0011@example.com/path\\u0011?query\\u0011#fragment\\u0011",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%11",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%11",
+                "query": "query%11",
+                "fragment": "fragment%11"
+            }
+        },
+        {
+            "input": "http://user\\u0012@example.com/path\\u0012?query\\u0012#fragment\\u0012",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%12",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%12",
+                "query": "query%12",
+                "fragment": "fragment%12"
+            }
+        },
+        {
+            "input": "http://user\\u0013@example.com/path\\u0013?query\\u0013#fragment\\u0013",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%13",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%13",
+                "query": "query%13",
+                "fragment": "fragment%13"
+            }
+        },
+        {
+            "input": "http://user\\u0014@example.com/path\\u0014?query\\u0014#fragment\\u0014",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%14",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%14",
+                "query": "query%14",
+                "fragment": "fragment%14"
+            }
+        },
+        {
+            "input": "http://user\\u0015@example.com/path\\u0015?query\\u0015#fragment\\u0015",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%15",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%15",
+                "query": "query%15",
+                "fragment": "fragment%15"
+            }
+        },
+        {
+            "input": "http://user\\u0016@example.com/path\\u0016?query\\u0016#fragment\\u0016",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%16",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%16",
+                "query": "query%16",
+                "fragment": "fragment%16"
+            }
+        },
+        {
+            "input": "http://user\\u0017@example.com/path\\u0017?query\\u0017#fragment\\u0017",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%17",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%17",
+                "query": "query%17",
+                "fragment": "fragment%17"
+            }
+        },
+        {
+            "input": "http://user\\u0018@example.com/path\\u0018?query\\u0018#fragment\\u0018",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%18",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%18",
+                "query": "query%18",
+                "fragment": "fragment%18"
+            }
+        },
+        {
+            "input": "http://user\\u0019@example.com/path\\u0019?query\\u0019#fragment\\u0019",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%19",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%19",
+                "query": "query%19",
+                "fragment": "fragment%19"
+            }
+        },
+        {
+            "input": "http://user\\u001a@example.com/path\\u001a?query\\u001a#fragment\\u001a",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%1A",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%1A",
+                "query": "query%1A",
+                "fragment": "fragment%1A"
+            }
+        },
+        {
+            "input": "http://user\\u001b@example.com/path\\u001b?query\\u001b#fragment\\u001b",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%1B",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%1B",
+                "query": "query%1B",
+                "fragment": "fragment%1B"
+            }
+        },
+        {
+            "input": "http://user\\u001c@example.com/path\\u001c?query\\u001c#fragment\\u001c",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%1C",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%1C",
+                "query": "query%1C",
+                "fragment": "fragment%1C"
+            }
+        },
+        {
+            "input": "http://user\\u001d@example.com/path\\u001d?query\\u001d#fragment\\u001d",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%1D",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%1D",
+                "query": "query%1D",
+                "fragment": "fragment%1D"
+            }
+        },
+        {
+            "input": "http://user\\u001e@example.com/path\\u001e?query\\u001e#fragment\\u001e",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%1E",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%1E",
+                "query": "query%1E",
+                "fragment": "fragment%1E"
+            }
+        },
+        {
+            "input": "http://user\\u001f@example.com/path\\u001f?query\\u001f#fragment\\u001f",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%1F",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%1F",
+                "query": "query%1F",
+                "fragment": "fragment%1F"
+            }
+        },
+        {
+            "input": "http://user @example.com/path ?query #fragment ",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%20",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%20",
+                "query": "query%20",
+                "fragment": "fragment%20"
+            }
+        },
+        {
+            "input": "http://user\\u007f@example.com/path\\u007f?query\\u007f#fragment\\u007f",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%7F",
+                "password": "",
+                "host": "example.com",
+                "port": "",
+                "path": "/path%7F",
+                "query": "query%7F",
+                "fragment": "fragment%7F"
+            }
+        },
+        {
+            "input": "http://google.com/mail",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/mail/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/mail",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "google.com/mail",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com?foo",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "foo",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "#?/!google.com/?foo",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": "?/!google.com/?foo"
+            }
+        },
+        {
+            "input": "/foo",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/foo",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/foo?bar=baz",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/foo",
+                "query": "bar=baz",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/foo?bar=baz#banana?apple/orange",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/foo",
+                "query": "bar=baz",
+                "fragment": "banana?apple/orange"
+            }
+        },
+        {
+            "input": "/redirect?target=http://localhost:61020/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/redirect",
+                "query": "target=http://localhost:61020/",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:80/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 80,
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:80",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 80,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://foo:bar@localhost/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "foo",
+                "password": "bar",
+                "host": "localhost",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://foo@localhost/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "foo",
+                "password": "",
+                "host": "localhost",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://foo:bar@localhost/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "foo",
+                "password": "bar",
+                "host": "localhost",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "?",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "#",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/abc/../def",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/def",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://K\\u00f6nigsg\\u00e4\\u00dfchen.de/stra\\u00dfe",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "xn--knigsgchen-b4a3dun.de",
+                "port": "",
+                "path": "/stra%C3%9Fe",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user@email.com:password@example.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%40email.com",
+                "password": "password",
+                "host": "example.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://user\":quoted@example.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "user%22",
+                "password": "quoted",
+                "host": "example.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/\\ud800",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/%ED%A0%80",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com?q=\\udc00",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "q=%ED%B0%80",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com#\\udc00",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": "%ED%B0%80"
+            }
+        },
+        {
+            "input": "/abc/../def",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/def",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/..",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/./abc/./def/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/abc/def/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/.",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/./",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/abc/./.././d/././e/.././f/./../../ghi",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/ghi",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/mail",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/mail/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "?",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "#",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/foo?bar=baz",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/foo",
+                "query": "bar=baz",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/mail",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com:80/mail",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 80,
+                "path": "/mail",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "google.com/foobar",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/foobar",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "google.com:12345",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": 12345,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "/",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com#@evil.com/",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": "@evil.com/"
+            }
+        },
+        {
+            "input": "http://127.0.0.1%0d%0aConnection%3a%20keep-alive",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "127.0.0.1%0d%0aconnection%3a%20keep-alive",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://google.com/\\uff2e\\uff2e/abc",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/%EF%BC%AE%EF%BC%AE/abc",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "javascript:a='@google.com:12345/';alert(0)",
+            "expected_output": {
+                "scheme": "javascript",
+                "user": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "path": "/a='@google.com:12345/';alert(0)",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "//google.com/a/b/c",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "google.com",
+                "port": "",
+                "path": "/a/b/c",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://\\u30d2:\\u30ad@\\u30d2.abc.\\u30cb/\\u30d2?\\u30ad#\\u30ef",
+            "expected_output": {
+                "scheme": "http",
+                "user": "%E3%83%92",
+                "password": "%E3%82%AD",
+                "host": "xn--pdk.abc.xn--idk",
+                "port": "",
+                "path": "/%E3%83%92",
+                "query": "%E3%82%AD",
+                "fragment": "%E3%83%AF"
+            }
+        },
+        {
+            "input": "10.251.0.83:7777?a=1 HTTP/1.1\r\nX-injected: header",
+            "expected_output": {
+                "scheme": "",
+                "user": "",
+                "password": "",
+                "host": "10.251.0.83",
+                "port": 7777,
+                "path": "",
+                "query": "a=1%20HTTP/1.1%0D%0AX-injected:%20header",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://127.0.0.1:6379?\r\nSET test failure12\r\n:8080/test/?test=a",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "127.0.0.1",
+                "port": 6379,
+                "path": "",
+                "query": "%0D%0ASET%20test%20failure12%0D%0A:8080/test/?test=a",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "https://user:pass@xdavidhu.me\\test.corp.google.com:8080/path/to/something?param=value#hash",
+            "expected_output": {
+                "scheme": "https",
+                "user": "user",
+                "password": "pass",
+                "host": "xdavidhu.me",
+                "port": "",
+                "path": "/%5Ctest.corp.google.com:8080/path/to/something",
+                "query": "param=value",
+                "fragment": "hash"
+            }
+        },
+        {
+            "input": "https://user:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@example.com",
+            "expected_output": {
+                "scheme": "https",
+                "user": "user",
+                "password": "%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40%40",
+                "host": "example.com",
+                "port": "",
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "http://proxy:8080",
+            "expected_output": {
+                "scheme": "http",
+                "user": "",
+                "password": "",
+                "host": "proxy",
+                "port": 8080,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        },
+        {
+            "input": "https://proxy:8443",
+            "expected_output": {
+                "scheme": "https",
+                "user": "",
+                "password": "",
+                "host": "proxy",
+                "port": 8443,
+                "path": "",
+                "query": "",
+                "fragment": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+  "testing": "url-parse.js",
+  "ndiffs": 0,
+  "nequal": 0,
+  "nerrors": 0,
+  "diffs": [
+    {
+      "input": "http:\\\\a\\b:c\\d@foo.com\\",
+      "output": {
+        "scheme": "http:",
+        "user": "",
+        "password": "",
+        "host": "a",
+        "port": "",
+        "path": "/b:c/d@foo.com/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "http://google.com:80\\@yahoo.com/#what\\is going on",
+      "output": {
+        "scheme": "http:",
+        "user": "",
+        "password": "",
+        "host": "google.com",
+        "port": "",
+        "path": "/@yahoo.com/",
+        "query": "",
+        "fragment": "#what\\is going on"
+      }
+    },
+    {
+      "input": "javascript:alert('\\@google.com/')",
+      "output": {
+        "scheme": "javascript:",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "alert('\\@google.com/')",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "foo/bar",
+      "output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "www.php.net:80/index.php?test=1",
+      "output": {
+        "scheme": "www.php.net:",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "80/index.php",
+        "query": "?test=1",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "https://user:pass@xdavidhu.me\test.corp.google.com:8080/path",
+      "output": {
+        "scheme": "https:",
+        "user": "user",
+        "password": "pass",
+        "host": "xdavidhu.me\test.corp.google.com",
+        "port": "8080",
+        "path": "/path",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "http://127.0.0.\r\n1:6379?SET\r\ntest\r\nfailure12:8080/test/?test=a",
+      "output": {
+        "scheme": "http:",
+        "user": "",
+        "password": "",
+        "host": "127.0.0.\r\n1",
+        "port": "6379",
+        "path": "/",
+        "query": "?SET\r\ntest\r\nfailure12:8080/test/?test=a",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "https:/\\/\\/\\github.com/foo/bar",
+      "output": {
+        "scheme": "https:",
+        "user": "",
+        "password": "",
+        "host": "github.com",
+        "port": "",
+        "path": "/foo/bar",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "foo://///////bar.com/",
+      "output": {
+        "scheme": "foo:",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "///////bar.com/",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "../g",
+      "output": {
+        "scheme": "",
+        "user": "",
+        "password": "",
+        "host": "",
+        "port": "",
+        "path": "../g",
+        "query": "",
+        "fragment": ""
+      }
+    },
+    {
+      "input": "http://ヒ:キ@ヒ.abc.ニ/ヒ?キ#ワ",
+      "output": {
+        "scheme": "http:",
+        "user": "ヒ",
+        "password": "キ",
+        "host": "ヒ.abc.ニ",
+        "port": "",
+        "path": "/ヒ",
+        "query": "?キ",
+        "fragment": "#ワ"
+      }
+    }
+  ]
+}

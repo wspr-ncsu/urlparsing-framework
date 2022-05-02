@@ -1,0 +1,497 @@
+URL,PHP
+http://%67%6f%6f%67%6c%65%2e%63%6f%6d,"Array
+(
+    [scheme] => http
+    [host] => %67%6f%6f%67%6c%65%2e%63%6f%6d
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://%31%32%37%2e%30%2e%30%2e%31,"Array
+(
+    [scheme] => http
+    [host] => %31%32%37%2e%30%2e%30%2e%31
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+ldap://127.0.0.1#.evilhost.com:1389/a,"Array
+(
+    [scheme] => ldap
+    [host] => 127.0.0.1
+    [fragment] => .evilhost.com:1389/a
+    [user] => 
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+foo.com?u=///evil.com,"Array
+(
+    [path] => foo.com
+    [query] => u=///evil.com
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+http://www.victim.com/////evil.com,"Array
+(
+    [scheme] => http
+    [host] => www.victim.com
+    [path] => /////evil.com
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+https://EXAMPLE.com/../x,"Array
+(
+    [scheme] => https
+    [host] => EXAMPLE.com
+    [path] => /../x
+    [user] => 
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+urn:isbn:9780307476463,"Array
+(
+    [scheme] => urn
+    [path] => isbn:9780307476463
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+sub.example.إختبار,"Array
+(
+    [path] => sub.example.إختبار
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://user@example.com:80@daniel.haxx.se,"Array
+(
+    [scheme] => http
+    [host] => daniel.haxx.se
+    [user] => user@example.com
+    [password] => 80
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+jndi:ldap://127.0.0.1#.evilhost.com:1389/a,"Array
+(
+    [scheme] => jndi
+    [path] => ldap://127.0.0.1
+    [fragment] => .evilhost.com:1389/a
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+"javascript:alert('\@google.com/')","Array
+(
+    [scheme] => javascript
+    [path] => alert('\@google.com/')
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://foo@evil.com:80@google.com/,"Array
+(
+    [scheme] => http
+    [host] => google.com
+    [user] => foo@evil.com
+    [path] => /
+    [password] => 80
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://foo@127.0.0.1 @google.com/","Array
+(
+    [scheme] => http
+    [host] => google.com
+    [user] => foo@127.0.0.1 
+    [path] => /
+    [password] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://google.com@evil.com,"Array
+(
+    [scheme] => http
+    [host] => evil.com
+    [user] => google.com
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://0
+ SLAVEOF orange.tw 6379
+ :80","Array
+(
+    [scheme] => http
+    [host] => 0__ SLAVEOF orange.tw 6379__ 
+    [port] => 80
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://1.1.1.1 &@2.2.2.2# @3.3.3.3/","Array
+(
+    [scheme] => http
+    [host] => 2.2.2.2
+    [user] => 1.1.1.1 &
+    [fragment] =>  @3.3.3.3/
+    [password] => 
+    [port] => 
+    [path] => 
+    [query] => 
+)
+"
+"http:\\foo.com\","Array
+(
+    [scheme] => http
+    [path] => \\foo.com\
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http:\\a\b:c\d@foo.com\","Array
+(
+    [scheme] => http
+    [path] => \\a\b:c\d@foo.com\
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+foo://///////bar.com/,"Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+http:[61:27]/:foo,"Array
+(
+    [scheme] => http
+    [path] => [61:27]/:foo
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+" This is \interesting// 	","Array
+(
+    [path] =>  This is \interesting// _
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+path/f.txt,"Array
+(
+    [path] => path/f.txt
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"javascript :alert(""He:/l\l#o?foo""); ","Array
+(
+    [path] => javascript :alert(""He:/l\l
+    [fragment] => o?foo""); 
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+)
+"
+"http://google.com:80\@yahoo.com/#what\is going on","Array
+(
+    [scheme] => http
+    [host] => yahoo.com
+    [user] => google.com
+    [path] => /
+    [fragment] => what\is going on
+    [password] => 80\
+    [port] => 
+    [query] => 
+)
+"
+"\\\\what-is-up.com","Array
+(
+    [path] => \\\\what-is-up.com
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"https:/\/\/\github.com/foo/bar","Array
+(
+    [scheme] => https
+    [path] => /\/\/\github.com/foo/bar
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"file://c:\foo\bar\","Array
+(
+    [scheme] => Not Parsed. Return: false
+)
+"
+foo/bar,"Array
+(
+    [path] => foo/bar
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+d/e/f/./../../g,"Array
+(
+    [path] => d/e/f/./../../g
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+http://www.example.net:0x10,"Array
+(
+    [scheme] => http
+    [host] => www.example.net
+    [port] => 0
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+g;x?y#s,"Array
+(
+    [path] => g;x
+    [query] => y
+    [fragment] => s
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+)
+"
+../g,"Array
+(
+    [path] => ../g
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+path,"Array
+(
+    [path] => path
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+www.php.net:80/index.php?test=1&test2=char&test3=mixesCI#some_page_ref123,"Array
+(
+    [host] => www.php.net
+    [port] => 80
+    [path] => /index.php
+    [query] => test=1&test2=char&test3=mixesCI
+    [fragment] => some_page_ref123
+    [scheme] => 
+    [user] => 
+    [password] => 
+)
+"
+64.246.30.37,"Array
+(
+    [path] => 64.246.30.37
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"http://user\u0000@example.com/path\u0000?query\u0000#fragment\u0000","Array
+(
+    [scheme] => http
+    [host] => example.com
+    [user] => user\u0000
+    [path] => /path\u0000
+    [query] => query\u0000
+    [fragment] => fragment\u0000
+    [password] => 
+    [port] => 
+)
+"
+"http://\u30d2:\u30ad@\u30d2.abc.\u30cb/\u30d2?\u30ad#\u30ef","Array
+(
+    [scheme] => http
+    [host] => \u30d2.abc.\u30cb
+    [user] => \u30d2
+    [path] => /\u30d2
+    [query] => \u30ad
+    [fragment] => \u30ef
+    [password] => \u30ad
+    [port] => 
+)
+"
+"https://user:pass@xdavidhu.me	est.corp.google.com:8080/path/to/something?param=value#hash","Array
+(
+    [scheme] => https
+    [host] => xdavidhu.me_est.corp.google.com
+    [port] => 8080
+    [user] => user
+    [path] => /path/to/something
+    [query] => param=value
+    [fragment] => hash
+    [password] => pass
+)
+"
+google.com:12345,"Array
+(
+    [host] => google.com
+    [port] => 12345
+    [scheme] => 
+    [user] => 
+    [password] => 
+    [path] => 
+    [query] => 
+    [fragment] => 
+)
+"
+"10.251.0.83:7777?a=1 HTTP/1.1
+X-injected: header","Array
+(
+    [scheme] => 10.251.0.83
+    [path] => 7777
+    [query] => a=1 HTTP/1.1__X-injected: header
+    [user] => 
+    [password] => 
+    [host] => 
+    [port] => 
+    [fragment] => 
+)
+"
+"http://127.0.0.1:6379?
+SET test failure12
+:8080/test/?test=a","Array
+(
+    [scheme] => http
+    [host] => 127.0.0.1
+    [port] => 6379
+    [query] => __SET test failure12__:8080/test/?test=a
+    [user] => 
+    [password] => 
+    [path] => 
+    [fragment] => 
+)
+"
+"http://127.0.0.
+1:6379?SET test failure12:8080/test/?test=a","Array
+(
+    [scheme] => http
+    [host] => 127.0.0.__1
+    [port] => 6379
+    [query] => SET test failure12:8080/test/?test=a
+    [user] => 
+    [password] => 
+    [path] => 
+    [fragment] => 
+)
+"
